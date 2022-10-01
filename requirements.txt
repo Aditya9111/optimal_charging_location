@@ -9,3 +9,4 @@ folium
 scipy
 pulp
 IPython
+gunicorn
