@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib
+geopandas
+sklearn
+shapefile
+shapely
+folium
+scipy
+pulp
+IPython

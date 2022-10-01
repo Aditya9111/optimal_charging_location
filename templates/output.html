@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Optimus</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link
+      href="../static/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Fonts -->
+    <link
+      href="../static/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../static/vendor/simple-line-icons/css/simple-line-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link href="../static/css/stylish-portfolio.min.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <!-- Navbar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Optimus</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/process">Process</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/output">Optimum Location</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Try Section -->
+    <section class="mb-0" id="try">
+      <div class="container">
+        <hr class="star-light mb-5" />
+        <h5>
+          EVPR = Electric Vehicle Penetration Ratio (Percentage of market you
+          want to cover)
+        </h5>
+
+        <hr class="star-light mb-5" />
+        <div class="col-sm m-3 text-center">
+          <form action="/output" method="POST" id="user_input">
+            <div style="width: 100%">
+              <h4>Electric Vehicle Penetration Ratio</h4>
+              <div class="slidecontainer">
+                <input
+                  type="range"
+                  min="0"
+                  max="10"
+                  step="1"
+                  value="0"
+                  class="slider"
+                  id="myRange1"
+                  name="slider1"
+                />
+                <p>Value: <span id="demo1"></span></p>
+              </div>
+            </div>
+          </form>
+          <div class="row justify-content-center">
+            <button
+              type="submit"
+              class="btn btn-secondary btn-lg"
+              form="user_input"
+            >
+              Find Optimal Locations!
+            </button>
+          </div>
+        </div>
+
+        <div class="row mt-4 justify-content-center">
+          <h2 class="text-center text-uppercase">
+            See Optimal Locations of Extra Charging Stations Below.
+          </h2>
+          {% for table in tables %} {{ table|safe }} {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var slider1 = document.getElementById("myRange1");
+      var output1 = document.getElementById("demo1");
+      output1.innerHTML = slider1.value;
+
+      slider1.oninput = function () {
+        output1.innerHTML = this.value;
+      };
+    </script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../static/js/stylish-portfolio.min.js"></script>
+  </body>
+</html>

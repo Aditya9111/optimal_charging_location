@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_112e4d64b7741c84eef67dd24fcfb320 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@master/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_112e4d64b7741c84eef67dd24fcfb320" ></div>
+        
+</body>
+<script>    
+    
+            var map_112e4d64b7741c84eef67dd24fcfb320 = L.map(
+                "map_112e4d64b7741c84eef67dd24fcfb320",
+                {
+                    center: [12.9716, 77.5946],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c1b34237f32bbaffaf3027a1b12a139e = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var heat_map_8d553e520f1b2bd48e2b5fc5f472db29 = L.heatLayer(
+                [[12.9346426, 77.6113047], [12.9168833, 77.610429], [12.9505376, 77.5404331], [12.971572, 77.5961296], [12.9570836, 77.5812958], [13.01234, 77.55447], [12.9224993, 77.5847299], [13.019225, 77.5967623], [12.9423658, 77.6080003], [12.916035, 77.5932147], [12.9763407, 77.5342245], [13.0005326, 77.5783275], [12.9703379, 77.5464765], [12.9973969, 77.5538832], [12.9349073, 77.5743587], [12.9879297, 77.5449009], [12.9982695, 77.5528326], [12.9915956, 77.5576509], [12.918853, 77.594394], [12.9454944, 77.6188095], [12.9363279, 77.6231673], [12.9760763, 77.5354187], [12.9976902, 77.5447057], [12.9293363, 77.6279024], [12.9787563, 77.6331015], [13.0019129, 77.5768697], [12.9979238, 77.5623702], [12.9717419, 77.5432263], [12.9956521, 77.5630614], [12.9998653, 77.5635725], [12.9369493, 77.620223], [12.9523426, 77.5777609], [12.9545179, 77.5658733], [12.9150346, 77.5987006], [12.9334167, 77.609958], [12.9522934, 77.6400114], [12.9220423, 77.5932906], [12.9887564, 77.5375838], [12.9762056, 77.6194725], [13.0018509, 77.623479], [12.9295512, 77.6342242], [12.99421, 77.5712141], [12.936906, 77.6057811], [12.9396678, 77.5665728], [12.979799, 77.5480367], [12.9744492, 77.6144135], [12.9992847, 77.5496586], [12.9715987, 77.5945627], [12.9165955, 77.5911669], [12.9731232, 77.6032993], [13.026553, 77.580345], [13.0172473, 77.5563729], [12.9715755, 77.595823], [12.9868193, 77.5399876], [12.9312659, 77.5758251], [12.9154829, 77.6031952], [12.9689782, 77.6361527], [12.9567457, 77.5897275], [12.9794924, 77.5427997], [13.0111694, 77.5546378]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            map_112e4d64b7741c84eef67dd24fcfb320.fitBounds(
+                [[12.9150346, 77.5342245], [13.026553, 77.6400114]],
+                {}
+            );
+        
+    
+            var marker_ef0c7d88bbc84ea3ba42586f7e71de8d = L.marker(
+                [12.9660074, 77.7181261],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_d3f032249f633bd34a9c596725afec92 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ef0c7d88bbc84ea3ba42586f7e71de8d.setIcon(icon_d3f032249f633bd34a9c596725afec92);
+        
+    
+        var popup_e4a0505ba44d106e10619c9c2d747fcc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aedc046b0b2c932c55b6ea0508303aed = $(`<div id="html_aedc046b0b2c932c55b6ea0508303aed" style="width: 100.0%; height: 100.0%;">Brookefield Mall</div>`)[0];
+            popup_e4a0505ba44d106e10619c9c2d747fcc.setContent(html_aedc046b0b2c932c55b6ea0508303aed);
+        
+
+        marker_ef0c7d88bbc84ea3ba42586f7e71de8d.bindPopup(popup_e4a0505ba44d106e10619c9c2d747fcc)
+        ;
+
+        
+    
+    
+            var marker_5d42aa8163e9be7f79ecccd52ee1018c = L.marker(
+                [13.049016, 77.5935633],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_f2f28eb36d30fa8f135a632f9088726b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5d42aa8163e9be7f79ecccd52ee1018c.setIcon(icon_f2f28eb36d30fa8f135a632f9088726b);
+        
+    
+        var popup_a23939f947b1b75459033df1b3e5cb6e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e6c035af2c11a6694b090dbe4af470ec = $(`<div id="html_e6c035af2c11a6694b090dbe4af470ec" style="width: 100.0%; height: 100.0%;">Esteem Mall</div>`)[0];
+            popup_a23939f947b1b75459033df1b3e5cb6e.setContent(html_e6c035af2c11a6694b090dbe4af470ec);
+        
+
+        marker_5d42aa8163e9be7f79ecccd52ee1018c.bindPopup(popup_a23939f947b1b75459033df1b3e5cb6e)
+        ;
+
+        
+    
+    
+            var marker_c1fc6d13588a18be76ed069e5f8710a9 = L.marker(
+                [12.9219671, 77.6202518],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_9e6b2e78d3197821198980b4083d4abc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c1fc6d13588a18be76ed069e5f8710a9.setIcon(icon_9e6b2e78d3197821198980b4083d4abc);
+        
+    
+        var popup_50c7400dece31308309b97c101530524 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3f70be1c5dcbe39a89bcb2a55bad1e7a = $(`<div id="html_3f70be1c5dcbe39a89bcb2a55bad1e7a" style="width: 100.0%; height: 100.0%;">Market Square Mall</div>`)[0];
+            popup_50c7400dece31308309b97c101530524.setContent(html_3f70be1c5dcbe39a89bcb2a55bad1e7a);
+        
+
+        marker_c1fc6d13588a18be76ed069e5f8710a9.bindPopup(popup_50c7400dece31308309b97c101530524)
+        ;
+
+        
+    
+    
+            var marker_9361abee9890e42a4043dd38930086c9 = L.marker(
+                [12.9958017, 77.6963968],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_5ab28a225b77eb196fc79799805462e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_9361abee9890e42a4043dd38930086c9.setIcon(icon_5ab28a225b77eb196fc79799805462e2);
+        
+    
+        var popup_bd633c1cefec89432cce23b48b280a65 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4fe2d301471e6dd878098aa6537e706d = $(`<div id="html_4fe2d301471e6dd878098aa6537e706d" style="width: 100.0%; height: 100.0%;">Phoenix Marketcity</div>`)[0];
+            popup_bd633c1cefec89432cce23b48b280a65.setContent(html_4fe2d301471e6dd878098aa6537e706d);
+        
+
+        marker_9361abee9890e42a4043dd38930086c9.bindPopup(popup_bd633c1cefec89432cce23b48b280a65)
+        ;
+
+        
+    
+    
+            var marker_97d876d8779ee5da98bab6917d14f6da = L.marker(
+                [13.0450957, 77.6268964],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_f880598524194c47109abb0da6de38dc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_97d876d8779ee5da98bab6917d14f6da.setIcon(icon_f880598524194c47109abb0da6de38dc);
+        
+    
+        var popup_bc29d1ad9b62b8ccda4ea9f9ae0e6620 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_85576dd7b63927309368caed8b3def31 = $(`<div id="html_85576dd7b63927309368caed8b3def31" style="width: 100.0%; height: 100.0%;">Elements Mall</div>`)[0];
+            popup_bc29d1ad9b62b8ccda4ea9f9ae0e6620.setContent(html_85576dd7b63927309368caed8b3def31);
+        
+
+        marker_97d876d8779ee5da98bab6917d14f6da.bindPopup(popup_bc29d1ad9b62b8ccda4ea9f9ae0e6620)
+        ;
+
+        
+    
+    
+            var marker_a81618ac66736677e7bdaf49e45e432d = L.marker(
+                [12.9869757, 77.7363332],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_a182dbc203fae657f1155a0e0f225e49 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a81618ac66736677e7bdaf49e45e432d.setIcon(icon_a182dbc203fae657f1155a0e0f225e49);
+        
+    
+        var popup_6eaf791d5778f4ff8dbdcca2d593715d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a636e172782fef2fb70b6480c1786f9f = $(`<div id="html_a636e172782fef2fb70b6480c1786f9f" style="width: 100.0%; height: 100.0%;">Ascendas Park Square Mall</div>`)[0];
+            popup_6eaf791d5778f4ff8dbdcca2d593715d.setContent(html_a636e172782fef2fb70b6480c1786f9f);
+        
+
+        marker_a81618ac66736677e7bdaf49e45e432d.bindPopup(popup_6eaf791d5778f4ff8dbdcca2d593715d)
+        ;
+
+        
+    
+    
+            var marker_dfd19fdd300d42e51808baf0888edfc9 = L.marker(
+                [13.0009569, 77.6325712],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_6b1fc618e94aec4ae8ff8d2caa4073aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_dfd19fdd300d42e51808baf0888edfc9.setIcon(icon_6b1fc618e94aec4ae8ff8d2caa4073aa);
+        
+    
+        var popup_ba2c3f386ef34143eb5fcf4fe1a49a9a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_be4501a4b91cf2469c71a273d922b477 = $(`<div id="html_be4501a4b91cf2469c71a273d922b477" style="width: 100.0%; height: 100.0%;">Orion Avenue</div>`)[0];
+            popup_ba2c3f386ef34143eb5fcf4fe1a49a9a.setContent(html_be4501a4b91cf2469c71a273d922b477);
+        
+
+        marker_dfd19fdd300d42e51808baf0888edfc9.bindPopup(popup_ba2c3f386ef34143eb5fcf4fe1a49a9a)
+        ;
+
+        
+    
+    
+            var marker_8a4e57b5d63f0cc20a64c361aabc8362 = L.marker(
+                [12.9144032, 77.5995815],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_deaec0a400938b4ce1e3288b1c7e6497 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8a4e57b5d63f0cc20a64c361aabc8362.setIcon(icon_deaec0a400938b4ce1e3288b1c7e6497);
+        
+    
+        var popup_9d1d5d7416e9154cfcdd15edce205a79 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_743e86866dc5bc0e0f41fcb6179ed77c = $(`<div id="html_743e86866dc5bc0e0f41fcb6179ed77c" style="width: 100.0%; height: 100.0%;">Gopalan Innovation Mall</div>`)[0];
+            popup_9d1d5d7416e9154cfcdd15edce205a79.setContent(html_743e86866dc5bc0e0f41fcb6179ed77c);
+        
+
+        marker_8a4e57b5d63f0cc20a64c361aabc8362.bindPopup(popup_9d1d5d7416e9154cfcdd15edce205a79)
+        ;
+
+        
+    
+    
+            var marker_794325a3974d99b18d43dd41663e02c3 = L.marker(
+                [12.9575403, 77.7451366],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_0ffcdd50cbfff3950e4341b153e23667 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_794325a3974d99b18d43dd41663e02c3.setIcon(icon_0ffcdd50cbfff3950e4341b153e23667);
+        
+    
+        var popup_2c4bdaf02f119fdb6bc66aa69ae6f725 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_93116c563bc9107a4c24c36758133016 = $(`<div id="html_93116c563bc9107a4c24c36758133016" style="width: 100.0%; height: 100.0%;">Virginia Mall</div>`)[0];
+            popup_2c4bdaf02f119fdb6bc66aa69ae6f725.setContent(html_93116c563bc9107a4c24c36758133016);
+        
+
+        marker_794325a3974d99b18d43dd41663e02c3.bindPopup(popup_2c4bdaf02f119fdb6bc66aa69ae6f725)
+        ;
+
+        
+    
+    
+            var marker_7e259f4a1aecbb2f266b00ad5309af59 = L.marker(
+                [12.9166593, 77.6713292],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_ce7dc48733737256380cca1840e4222c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7e259f4a1aecbb2f266b00ad5309af59.setIcon(icon_ce7dc48733737256380cca1840e4222c);
+        
+    
+        var popup_9800537f239ba3f3ab3316ea442eca58 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5bdef5a4c2142ca0956fb07b5f8262cc = $(`<div id="html_5bdef5a4c2142ca0956fb07b5f8262cc" style="width: 100.0%; height: 100.0%;">Market Square Mall Sarjapur Road</div>`)[0];
+            popup_9800537f239ba3f3ab3316ea442eca58.setContent(html_5bdef5a4c2142ca0956fb07b5f8262cc);
+        
+
+        marker_7e259f4a1aecbb2f266b00ad5309af59.bindPopup(popup_9800537f239ba3f3ab3316ea442eca58)
+        ;
+
+        
+    
+    
+            var marker_5b8302f30e4ddfc9f9a1de9f9aa2ed60 = L.marker(
+                [12.9065361, 77.603314],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_d216b038bca3a5b7aa2ed0e340af1b64 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5b8302f30e4ddfc9f9a1de9f9aa2ed60.setIcon(icon_d216b038bca3a5b7aa2ed0e340af1b64);
+        
+    
+        var popup_10b1b4462a6216c3c0f53a4a316c4829 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac5191b1dd272e9d67d08ab617556b4e = $(`<div id="html_ac5191b1dd272e9d67d08ab617556b4e" style="width: 100.0%; height: 100.0%;">Sampoorna Shopping Center</div>`)[0];
+            popup_10b1b4462a6216c3c0f53a4a316c4829.setContent(html_ac5191b1dd272e9d67d08ab617556b4e);
+        
+
+        marker_5b8302f30e4ddfc9f9a1de9f9aa2ed60.bindPopup(popup_10b1b4462a6216c3c0f53a4a316c4829)
+        ;
+
+        
+    
+    
+            var marker_275e457defe954ae66209bce7d91d3d2 = L.marker(
+                [13.0159224, 77.6378681],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_e14e960b6ee09f65a73436345cd80b8a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_275e457defe954ae66209bce7d91d3d2.setIcon(icon_e14e960b6ee09f65a73436345cd80b8a);
+        
+    
+        var popup_f77404803db8db6c3c8a10fd74d0d8cb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea40ad74c67b4ffe5a0cfd5685c48733 = $(`<div id="html_ea40ad74c67b4ffe5a0cfd5685c48733" style="width: 100.0%; height: 100.0%;">LML MALL Shopping Mall</div>`)[0];
+            popup_f77404803db8db6c3c8a10fd74d0d8cb.setContent(html_ea40ad74c67b4ffe5a0cfd5685c48733);
+        
+
+        marker_275e457defe954ae66209bce7d91d3d2.bindPopup(popup_f77404803db8db6c3c8a10fd74d0d8cb)
+        ;
+
+        
+    
+    
+            var marker_77b39873ce0fcb1694a6493ba6334f31 = L.marker(
+                [12.9344398, 77.6112678],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_3ff6b4de1839ccff826fe4d0ddfd0a4c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_77b39873ce0fcb1694a6493ba6334f31.setIcon(icon_3ff6b4de1839ccff826fe4d0ddfd0a4c);
+        
+    
+        var popup_c9ba54d290bb4e8e466d42aa8ba17df7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3f46f0a059c7c7e69cb7f5ee69c5d456 = $(`<div id="html_3f46f0a059c7c7e69cb7f5ee69c5d456" style="width: 100.0%; height: 100.0%;">Nexus Mall Koramangala</div>`)[0];
+            popup_c9ba54d290bb4e8e466d42aa8ba17df7.setContent(html_3f46f0a059c7c7e69cb7f5ee69c5d456);
+        
+
+        marker_77b39873ce0fcb1694a6493ba6334f31.bindPopup(popup_c9ba54d290bb4e8e466d42aa8ba17df7)
+        ;
+
+        
+    
+    
+            var marker_bfd3da45d9cdc2443863f3dd6afa2540 = L.marker(
+                [12.9596271, 77.7479488],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_a446ed88f95b5e01d3baa3ed1c596816 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_bfd3da45d9cdc2443863f3dd6afa2540.setIcon(icon_a446ed88f95b5e01d3baa3ed1c596816);
+        
+    
+        var popup_f32feef81787337531a961aca745384e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b56a6b53c78b173cae6d6f6e6a9a3f5a = $(`<div id="html_b56a6b53c78b173cae6d6f6e6a9a3f5a" style="width: 100.0%; height: 100.0%;">Nexus Whitefield (The Forum Neighbourhood Mall)</div>`)[0];
+            popup_f32feef81787337531a961aca745384e.setContent(html_b56a6b53c78b173cae6d6f6e6a9a3f5a);
+        
+
+        marker_bfd3da45d9cdc2443863f3dd6afa2540.bindPopup(popup_f32feef81787337531a961aca745384e)
+        ;
+
+        
+    
+    
+            var marker_f71045e0185c47844537250bdfe3fd92 = L.marker(
+                [12.9669731, 77.5400346],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_370b5d08bd7264cadfa3b856c48a60d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f71045e0185c47844537250bdfe3fd92.setIcon(icon_370b5d08bd7264cadfa3b856c48a60d3);
+        
+    
+        var popup_c32667b9c0b6b285857af509b6f57e54 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fac5ae1c6a759dc7cc0cd1302b09c71d = $(`<div id="html_fac5ae1c6a759dc7cc0cd1302b09c71d" style="width: 100.0%; height: 100.0%;">Market place Vijayanagar</div>`)[0];
+            popup_c32667b9c0b6b285857af509b6f57e54.setContent(html_fac5ae1c6a759dc7cc0cd1302b09c71d);
+        
+
+        marker_f71045e0185c47844537250bdfe3fd92.bindPopup(popup_c32667b9c0b6b285857af509b6f57e54)
+        ;
+
+        
+    
+    
+            var marker_159e34e2af4bee950222cfa541aeb228 = L.marker(
+                [12.9219084, 77.6204084],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_613148d6716d6166d98fbf4a67de62ea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_159e34e2af4bee950222cfa541aeb228.setIcon(icon_613148d6716d6166d98fbf4a67de62ea);
+        
+    
+        var popup_78e05f601449df34959f522aa73f22de = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d49a550c0626da8309b6d8adde92f09d = $(`<div id="html_d49a550c0626da8309b6d8adde92f09d" style="width: 100.0%; height: 100.0%;">Total Mall</div>`)[0];
+            popup_78e05f601449df34959f522aa73f22de.setContent(html_d49a550c0626da8309b6d8adde92f09d);
+        
+
+        marker_159e34e2af4bee950222cfa541aeb228.bindPopup(popup_78e05f601449df34959f522aa73f22de)
+        ;
+
+        
+    
+    
+            var marker_64230b90a0fc33fe6111feb2ff9e7191 = L.marker(
+                [12.9388961, 77.7412074],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_8fae8d5ec1335fdd3f166322e5fc06b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_64230b90a0fc33fe6111feb2ff9e7191.setIcon(icon_8fae8d5ec1335fdd3f166322e5fc06b3);
+        
+    
+        var popup_903074a1b2bbba2a2f4c20f2c3dde756 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0ce4b6b8c903bb131438da51386e1ee2 = $(`<div id="html_0ce4b6b8c903bb131438da51386e1ee2" style="width: 100.0%; height: 100.0%;">Central</div>`)[0];
+            popup_903074a1b2bbba2a2f4c20f2c3dde756.setContent(html_0ce4b6b8c903bb131438da51386e1ee2);
+        
+
+        marker_64230b90a0fc33fe6111feb2ff9e7191.bindPopup(popup_903074a1b2bbba2a2f4c20f2c3dde756)
+        ;
+
+        
+    
+    
+            var marker_df62ba299393fc6db1d0ba23855fee5b = L.marker(
+                [13.0942361, 77.5949472],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_4031fc8f66a74c5ea6650071264c2719 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_df62ba299393fc6db1d0ba23855fee5b.setIcon(icon_4031fc8f66a74c5ea6650071264c2719);
+        
+    
+        var popup_2ca9ef3dca770d0c15f027f5c941c975 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0e943f5e9226f0ed757bae05a7d3feb9 = $(`<div id="html_0e943f5e9226f0ed757bae05a7d3feb9" style="width: 100.0%; height: 100.0%;">The Galleria Mall</div>`)[0];
+            popup_2ca9ef3dca770d0c15f027f5c941c975.setContent(html_0e943f5e9226f0ed757bae05a7d3feb9);
+        
+
+        marker_df62ba299393fc6db1d0ba23855fee5b.bindPopup(popup_2ca9ef3dca770d0c15f027f5c941c975)
+        ;
+
+        
+    
+    
+            var marker_518786d2c9e626e8372484686c2f3b37 = L.marker(
+                [13.0983706, 77.581857],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_9ff0276bed8fc14f18358661d110ceb6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_518786d2c9e626e8372484686c2f3b37.setIcon(icon_9ff0276bed8fc14f18358661d110ceb6);
+        
+    
+        var popup_3b01b824036b35a1c59601776c7226e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f1fca628dbbba8dd59f575d1c1133bc4 = $(`<div id="html_f1fca628dbbba8dd59f575d1c1133bc4" style="width: 100.0%; height: 100.0%;">Yelahanka New Town Shopping Complex</div>`)[0];
+            popup_3b01b824036b35a1c59601776c7226e7.setContent(html_f1fca628dbbba8dd59f575d1c1133bc4);
+        
+
+        marker_518786d2c9e626e8372484686c2f3b37.bindPopup(popup_3b01b824036b35a1c59601776c7226e7)
+        ;
+
+        
+    
+    
+            var marker_60a69cd512e18a6d6bc269ecabc8947b = L.marker(
+                [12.9771132, 77.5704966],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_6244a60841deeac787c6303af3b3c931 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_60a69cd512e18a6d6bc269ecabc8947b.setIcon(icon_6244a60841deeac787c6303af3b3c931);
+        
+    
+        var popup_8eb4f48f61a95c45dda91f4b54b58d07 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e027e7daaf55f4b476ab7ce3f54e4a3a = $(`<div id="html_e027e7daaf55f4b476ab7ce3f54e4a3a" style="width: 100.0%; height: 100.0%;">Sri Rampuram Shopping Complex</div>`)[0];
+            popup_8eb4f48f61a95c45dda91f4b54b58d07.setContent(html_e027e7daaf55f4b476ab7ce3f54e4a3a);
+        
+
+        marker_60a69cd512e18a6d6bc269ecabc8947b.bindPopup(popup_8eb4f48f61a95c45dda91f4b54b58d07)
+        ;
+
+        
+    
+    
+            var marker_033862fc5bea01f0e9d4ca3afd8aa015 = L.marker(
+                [12.9826516, 77.6095684],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_ad88775218cae279dd691e00f93fc45b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_033862fc5bea01f0e9d4ca3afd8aa015.setIcon(icon_ad88775218cae279dd691e00f93fc45b);
+        
+    
+        var popup_9dfbbe3dd2c909b78c33dc7a84bf554b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_11a12d7a573b2d03d77c1eee42e0a868 = $(`<div id="html_11a12d7a573b2d03d77c1eee42e0a868" style="width: 100.0%; height: 100.0%;">Plazzo Retail Mall</div>`)[0];
+            popup_9dfbbe3dd2c909b78c33dc7a84bf554b.setContent(html_11a12d7a573b2d03d77c1eee42e0a868);
+        
+
+        marker_033862fc5bea01f0e9d4ca3afd8aa015.bindPopup(popup_9dfbbe3dd2c909b78c33dc7a84bf554b)
+        ;
+
+        
+    
+    
+            var marker_bc3007f9e6d971f077b927c688729227 = L.marker(
+                [12.989536, 77.7281015],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_022dbd177c5d82c260d27190633bbdf9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_bc3007f9e6d971f077b927c688729227.setIcon(icon_022dbd177c5d82c260d27190633bbdf9);
+        
+    
+        var popup_0e7c2934c1266f15077fb62a8fe6ed31 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4105c6d21aa4c9af79f97536bf57bfb9 = $(`<div id="html_4105c6d21aa4c9af79f97536bf57bfb9" style="width: 100.0%; height: 100.0%;">Nexus Shantiniketan Mall</div>`)[0];
+            popup_0e7c2934c1266f15077fb62a8fe6ed31.setContent(html_4105c6d21aa4c9af79f97536bf57bfb9);
+        
+
+        marker_bc3007f9e6d971f077b927c688729227.bindPopup(popup_0e7c2934c1266f15077fb62a8fe6ed31)
+        ;
+
+        
+    
+    
+            var marker_072ac51bd5a9543b0c62ab153b61e32e = L.marker(
+                [12.9569465, 77.7010732],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_4922629a913bd84bdd0dede4e0d94d29 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_072ac51bd5a9543b0c62ab153b61e32e.setIcon(icon_4922629a913bd84bdd0dede4e0d94d29);
+        
+    
+        var popup_53fad6f3d3bd1f27fb5da877800fd281 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d64206e524fdd262502e6b5c7d75b48d = $(`<div id="html_d64206e524fdd262502e6b5c7d75b48d" style="width: 100.0%; height: 100.0%;">Times Square, Marathahalli</div>`)[0];
+            popup_53fad6f3d3bd1f27fb5da877800fd281.setContent(html_d64206e524fdd262502e6b5c7d75b48d);
+        
+
+        marker_072ac51bd5a9543b0c62ab153b61e32e.bindPopup(popup_53fad6f3d3bd1f27fb5da877800fd281)
+        ;
+
+        
+    
+    
+            var marker_38a4fe90440a6e404c7332a6e74eff0d = L.marker(
+                [12.9587687, 77.6568673],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_96701e205da94d4229898ca734fb0fbb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_38a4fe90440a6e404c7332a6e74eff0d.setIcon(icon_96701e205da94d4229898ca734fb0fbb);
+        
+    
+        var popup_2841b23af37bd9b7b874844295624dbf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_94ab6d865e8b54efdcf31462499a6a64 = $(`<div id="html_94ab6d865e8b54efdcf31462499a6a64" style="width: 100.0%; height: 100.0%;">Total Mall</div>`)[0];
+            popup_2841b23af37bd9b7b874844295624dbf.setContent(html_94ab6d865e8b54efdcf31462499a6a64);
+        
+
+        marker_38a4fe90440a6e404c7332a6e74eff0d.bindPopup(popup_2841b23af37bd9b7b874844295624dbf)
+        ;
+
+        
+    
+    
+            var marker_179f5a6927d2cfb2d7c7acc23c695f18 = L.marker(
+                [12.995611, 77.7005735],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_f93940d2df8d0218c20302735298bfb9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_179f5a6927d2cfb2d7c7acc23c695f18.setIcon(icon_f93940d2df8d0218c20302735298bfb9);
+        
+    
+        var popup_a7e68ed9f8b9e5acf31177fae76e6169 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_819c0028b9da1cef9c5a7bbb52e14a66 = $(`<div id="html_819c0028b9da1cef9c5a7bbb52e14a66" style="width: 100.0%; height: 100.0%;">Metro shopping Complex</div>`)[0];
+            popup_a7e68ed9f8b9e5acf31177fae76e6169.setContent(html_819c0028b9da1cef9c5a7bbb52e14a66);
+        
+
+        marker_179f5a6927d2cfb2d7c7acc23c695f18.bindPopup(popup_a7e68ed9f8b9e5acf31177fae76e6169)
+        ;
+
+        
+    
+    
+            var marker_a8d2e6ebd130f35e9ab2ad8c4e360d04 = L.marker(
+                [12.9958569, 77.6956414],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_9b1ef64ec61e5a59f619595d139c076a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a8d2e6ebd130f35e9ab2ad8c4e360d04.setIcon(icon_9b1ef64ec61e5a59f619595d139c076a);
+        
+    
+        var popup_6f857682c9a2153088013e1758698b47 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6994adf6dc457f7ec8f12068e2abf641 = $(`<div id="html_6994adf6dc457f7ec8f12068e2abf641" style="width: 100.0%; height: 100.0%;">VR Bengaluru</div>`)[0];
+            popup_6f857682c9a2153088013e1758698b47.setContent(html_6994adf6dc457f7ec8f12068e2abf641);
+        
+
+        marker_a8d2e6ebd130f35e9ab2ad8c4e360d04.bindPopup(popup_6f857682c9a2153088013e1758698b47)
+        ;
+
+        
+    
+    
+            var marker_9db6cf2493bfce8eb5e70b2ce1e25f41 = L.marker(
+                [12.9742789, 77.577852],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_13b23ebfc24ce9df73227c79e3d8ec64 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_9db6cf2493bfce8eb5e70b2ce1e25f41.setIcon(icon_13b23ebfc24ce9df73227c79e3d8ec64);
+        
+    
+        var popup_4e8a27577c38612abf8b4f1961c5a9df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3a0cead2958e30bf82f4305e06b66a15 = $(`<div id="html_3a0cead2958e30bf82f4305e06b66a15" style="width: 100.0%; height: 100.0%;">Citi Center Shopping Arcade</div>`)[0];
+            popup_4e8a27577c38612abf8b4f1961c5a9df.setContent(html_3a0cead2958e30bf82f4305e06b66a15);
+        
+
+        marker_9db6cf2493bfce8eb5e70b2ce1e25f41.bindPopup(popup_4e8a27577c38612abf8b4f1961c5a9df)
+        ;
+
+        
+    
+    
+            var marker_198393ff8e9e04a0ee3230aa470a391b = L.marker(
+                [12.9454238, 77.5712939],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_b4225ccd3239c4dfef9e0368e2667e64 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_198393ff8e9e04a0ee3230aa470a391b.setIcon(icon_b4225ccd3239c4dfef9e0368e2667e64);
+        
+    
+        var popup_fc6bdffd5595a1ac2682b01343f09c87 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d0516a8406508fa3ea3557851874ca6a = $(`<div id="html_d0516a8406508fa3ea3557851874ca6a" style="width: 100.0%; height: 100.0%;">Shopping mall</div>`)[0];
+            popup_fc6bdffd5595a1ac2682b01343f09c87.setContent(html_d0516a8406508fa3ea3557851874ca6a);
+        
+
+        marker_198393ff8e9e04a0ee3230aa470a391b.bindPopup(popup_fc6bdffd5595a1ac2682b01343f09c87)
+        ;
+
+        
+    
+    
+            var marker_3d3fc6a7b3efe87e6ad369a51158855c = L.marker(
+                [12.974689, 77.6078077],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_dbd0807455bd9e01e2e8782278441533 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3d3fc6a7b3efe87e6ad369a51158855c.setIcon(icon_dbd0807455bd9e01e2e8782278441533);
+        
+    
+        var popup_d8766aa6687a18c9c54df5ef5d3e685d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c15b8609f6707f54a93b2e9342404290 = $(`<div id="html_c15b8609f6707f54a93b2e9342404290" style="width: 100.0%; height: 100.0%;">Brigade Originals</div>`)[0];
+            popup_d8766aa6687a18c9c54df5ef5d3e685d.setContent(html_c15b8609f6707f54a93b2e9342404290);
+        
+
+        marker_3d3fc6a7b3efe87e6ad369a51158855c.bindPopup(popup_d8766aa6687a18c9c54df5ef5d3e685d)
+        ;
+
+        
+    
+    
+            var marker_8153e28d803660b685b0d6d2b35374b7 = L.marker(
+                [13.0301328, 77.570475],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_445cb2923f86fb59e066b92f2e57517a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8153e28d803660b685b0d6d2b35374b7.setIcon(icon_445cb2923f86fb59e066b92f2e57517a);
+        
+    
+        var popup_c70ebfa91a5239e00eeb243ed1e6a646 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_09e49b0a66f803f3ff28542f02983aad = $(`<div id="html_09e49b0a66f803f3ff28542f02983aad" style="width: 100.0%; height: 100.0%;">Shopping Complex</div>`)[0];
+            popup_c70ebfa91a5239e00eeb243ed1e6a646.setContent(html_09e49b0a66f803f3ff28542f02983aad);
+        
+
+        marker_8153e28d803660b685b0d6d2b35374b7.bindPopup(popup_c70ebfa91a5239e00eeb243ed1e6a646)
+        ;
+
+        
+    
+    
+            var marker_4b873239c7daec751829e993233690ce = L.marker(
+                [12.9808231, 77.6405588],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_320d14a1ae98e718409d2112b740418b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4b873239c7daec751829e993233690ce.setIcon(icon_320d14a1ae98e718409d2112b740418b);
+        
+    
+        var popup_9107a3f859a6fe7c97062ead68d2575f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9056d1be2184589a87465f62f84e5263 = $(`<div id="html_9056d1be2184589a87465f62f84e5263" style="width: 100.0%; height: 100.0%;">Kaypee Square</div>`)[0];
+            popup_9107a3f859a6fe7c97062ead68d2575f.setContent(html_9056d1be2184589a87465f62f84e5263);
+        
+
+        marker_4b873239c7daec751829e993233690ce.bindPopup(popup_9107a3f859a6fe7c97062ead68d2575f)
+        ;
+
+        
+    
+    
+            var marker_a6c18a24efea8ca5705e32a5d59ff8e7 = L.marker(
+                [13.0110582, 77.5550644],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_4afe13c044a508cdc386205ff000b1fb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a6c18a24efea8ca5705e32a5d59ff8e7.setIcon(icon_4afe13c044a508cdc386205ff000b1fb);
+        
+    
+        var popup_9364e04acd1b848babc62a877c1a6da6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_45de65087492cda988baa188425efe6d = $(`<div id="html_45de65087492cda988baa188425efe6d" style="width: 100.0%; height: 100.0%;">Orion Mall</div>`)[0];
+            popup_9364e04acd1b848babc62a877c1a6da6.setContent(html_45de65087492cda988baa188425efe6d);
+        
+
+        marker_a6c18a24efea8ca5705e32a5d59ff8e7.bindPopup(popup_9364e04acd1b848babc62a877c1a6da6)
+        ;
+
+        
+    
+    
+            var marker_f8206d80d22e49710aeac13ec9df96ed = L.marker(
+                [12.9453492, 77.5954342],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_178db2599f2c20f8674f87758564297b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f8206d80d22e49710aeac13ec9df96ed.setIcon(icon_178db2599f2c20f8674f87758564297b);
+        
+    
+        var popup_b092d29044def18c8018b5e1bdbef954 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0e582329f4052dffc128556d1de544ec = $(`<div id="html_0e582329f4052dffc128556d1de544ec" style="width: 100.0%; height: 100.0%;">Hara Rama Mall</div>`)[0];
+            popup_b092d29044def18c8018b5e1bdbef954.setContent(html_0e582329f4052dffc128556d1de544ec);
+        
+
+        marker_f8206d80d22e49710aeac13ec9df96ed.bindPopup(popup_b092d29044def18c8018b5e1bdbef954)
+        ;
+
+        
+    
+    
+            var marker_75b23bf153f43eebbd7e7519d23495eb = L.marker(
+                [12.8913892, 77.596796],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_e8daa2ff13f440fef8f827ba9fb0ba16 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_75b23bf153f43eebbd7e7519d23495eb.setIcon(icon_e8daa2ff13f440fef8f827ba9fb0ba16);
+        
+    
+        var popup_b44617e6013bd3243c76bd1b3f42793f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_086d1c4b039055d1c999df400ad09c98 = $(`<div id="html_086d1c4b039055d1c999df400ad09c98" style="width: 100.0%; height: 100.0%;">Prime Spectrum Mall</div>`)[0];
+            popup_b44617e6013bd3243c76bd1b3f42793f.setContent(html_086d1c4b039055d1c999df400ad09c98);
+        
+
+        marker_75b23bf153f43eebbd7e7519d23495eb.bindPopup(popup_b44617e6013bd3243c76bd1b3f42793f)
+        ;
+
+        
+    
+    
+            var marker_a34e5e4c5dc7a77df538f59c99abde3f = L.marker(
+                [12.925869, 77.675358],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_0eb1675b8771b7f2ea32ff9bc7d2c190 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a34e5e4c5dc7a77df538f59c99abde3f.setIcon(icon_0eb1675b8771b7f2ea32ff9bc7d2c190);
+        
+    
+        var popup_e700d137210c1f9340b4595fa563021e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f77c312397206ef4a47c6d37d020fef2 = $(`<div id="html_f77c312397206ef4a47c6d37d020fef2" style="width: 100.0%; height: 100.0%;">Soul Space Spirit Central Mall</div>`)[0];
+            popup_e700d137210c1f9340b4595fa563021e.setContent(html_f77c312397206ef4a47c6d37d020fef2);
+        
+
+        marker_a34e5e4c5dc7a77df538f59c99abde3f.bindPopup(popup_e700d137210c1f9340b4595fa563021e)
+        ;
+
+        
+    
+    
+            var marker_30435a19c1caab9ef48418275c30978a = L.marker(
+                [12.9928056, 77.6611738],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_0fb46867467a65c9f519c8fb463169f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_30435a19c1caab9ef48418275c30978a.setIcon(icon_0fb46867467a65c9f519c8fb463169f9);
+        
+    
+        var popup_ba44a4817e0ebfa4604b9936bec2701c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec016b0fd6ee8bb8f3e8732d99d83482 = $(`<div id="html_ec016b0fd6ee8bb8f3e8732d99d83482" style="width: 100.0%; height: 100.0%;">Gopalan Signature Mall</div>`)[0];
+            popup_ba44a4817e0ebfa4604b9936bec2701c.setContent(html_ec016b0fd6ee8bb8f3e8732d99d83482);
+        
+
+        marker_30435a19c1caab9ef48418275c30978a.bindPopup(popup_ba44a4817e0ebfa4604b9936bec2701c)
+        ;
+
+        
+    
+    
+            var marker_46c05e2eaaa7bb44230db0390d44894b = L.marker(
+                [12.9702626, 77.6099629],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_84dc26cb4f36ca1365e0d6b3223330a6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_46c05e2eaaa7bb44230db0390d44894b.setIcon(icon_84dc26cb4f36ca1365e0d6b3223330a6);
+        
+    
+        var popup_3096151459a5659d36f0ae9e7bf5783d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_788ab3e89b18d4f5bf23cec84968afe3 = $(`<div id="html_788ab3e89b18d4f5bf23cec84968afe3" style="width: 100.0%; height: 100.0%;">Garuda Mall</div>`)[0];
+            popup_3096151459a5659d36f0ae9e7bf5783d.setContent(html_788ab3e89b18d4f5bf23cec84968afe3);
+        
+
+        marker_46c05e2eaaa7bb44230db0390d44894b.bindPopup(popup_3096151459a5659d36f0ae9e7bf5783d)
+        ;
+
+        
+    
+    
+            var marker_01f77b29ff758d712392398f7b6a0db4 = L.marker(
+                [12.9265531, 77.5508278],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_902deed8b0e5664c81b260dda1346dc6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_01f77b29ff758d712392398f7b6a0db4.setIcon(icon_902deed8b0e5664c81b260dda1346dc6);
+        
+    
+        var popup_5a2242b379c5741d7548d659bd3efa3f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_20cb20c0f2ce19a8c4d01a6c8e277e89 = $(`<div id="html_20cb20c0f2ce19a8c4d01a6c8e277e89" style="width: 100.0%; height: 100.0%;">Gopalan Promenade Mall</div>`)[0];
+            popup_5a2242b379c5741d7548d659bd3efa3f.setContent(html_20cb20c0f2ce19a8c4d01a6c8e277e89);
+        
+
+        marker_01f77b29ff758d712392398f7b6a0db4.bindPopup(popup_5a2242b379c5741d7548d659bd3efa3f)
+        ;
+
+        
+    
+    
+            var marker_00756f56f117f1501734948d01d098e2 = L.marker(
+                [12.9124089, 77.6004591],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_47766666e34d7f102d7730f77939cde5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_00756f56f117f1501734948d01d098e2.setIcon(icon_47766666e34d7f102d7730f77939cde5);
+        
+    
+        var popup_1a43e20b635ecf1f346eb0a93c25f145 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d763d7c773d7581e8e087737700f8cc8 = $(`<div id="html_d763d7c773d7581e8e087737700f8cc8" style="width: 100.0%; height: 100.0%;">Elegance Mantri Mall</div>`)[0];
+            popup_1a43e20b635ecf1f346eb0a93c25f145.setContent(html_d763d7c773d7581e8e087737700f8cc8);
+        
+
+        marker_00756f56f117f1501734948d01d098e2.bindPopup(popup_1a43e20b635ecf1f346eb0a93c25f145)
+        ;
+
+        
+    
+    
+            var marker_252ca13436de4fa9fe3ad3845a138477 = L.marker(
+                [12.9971372, 77.6014861],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_addb765364fe5cac4c58329fdbdbea60 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_252ca13436de4fa9fe3ad3845a138477.setIcon(icon_addb765364fe5cac4c58329fdbdbea60);
+        
+    
+        var popup_d49e05f40d61ebaeac43075c60110077 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9d19f532b5013d0dfa1702c993a373d6 = $(`<div id="html_9d19f532b5013d0dfa1702c993a373d6" style="width: 100.0%; height: 100.0%;">IMA Shopping Mall</div>`)[0];
+            popup_d49e05f40d61ebaeac43075c60110077.setContent(html_9d19f532b5013d0dfa1702c993a373d6);
+        
+
+        marker_252ca13436de4fa9fe3ad3845a138477.bindPopup(popup_d49e05f40d61ebaeac43075c60110077)
+        ;
+
+        
+    
+    
+            var marker_48dfcad626f9741724c0cb73efd23bce = L.marker(
+                [12.9818734, 77.609643],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_c52e3c5fe313309020b8a8e4c4e288dd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_48dfcad626f9741724c0cb73efd23bce.setIcon(icon_c52e3c5fe313309020b8a8e4c4e288dd);
+        
+    
+        var popup_94f1f42346112487c98a2e8fa5d04804 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_64101ecf5d392ea705e18b945ba3e5ed = $(`<div id="html_64101ecf5d392ea705e18b945ba3e5ed" style="width: 100.0%; height: 100.0%;">100rs Shop</div>`)[0];
+            popup_94f1f42346112487c98a2e8fa5d04804.setContent(html_64101ecf5d392ea705e18b945ba3e5ed);
+        
+
+        marker_48dfcad626f9741724c0cb73efd23bce.bindPopup(popup_94f1f42346112487c98a2e8fa5d04804)
+        ;
+
+        
+    
+    
+            var marker_44dd44563c983c839cccbd98c8402096 = L.marker(
+                [12.9567296, 77.7099704],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_d5ed1136846dddad75f3258c64ad139f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_44dd44563c983c839cccbd98c8402096.setIcon(icon_d5ed1136846dddad75f3258c64ad139f);
+        
+    
+        var popup_87f812bb343e7df3e91f916c7f1da908 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f1bed8eeb4ae1c531980f489ac0203fa = $(`<div id="html_f1bed8eeb4ae1c531980f489ac0203fa" style="width: 100.0%; height: 100.0%;">Nandini eshoppe</div>`)[0];
+            popup_87f812bb343e7df3e91f916c7f1da908.setContent(html_f1bed8eeb4ae1c531980f489ac0203fa);
+        
+
+        marker_44dd44563c983c839cccbd98c8402096.bindPopup(popup_87f812bb343e7df3e91f916c7f1da908)
+        ;
+
+        
+    
+    
+            var marker_65aee6a700ec2916e1c4a6afa05c4e68 = L.marker(
+                [12.9455521, 77.5883664],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_9e29e105b9824c338742f0f45dfefa6c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_65aee6a700ec2916e1c4a6afa05c4e68.setIcon(icon_9e29e105b9824c338742f0f45dfefa6c);
+        
+    
+        var popup_50cbf3125c408c426590fdc90000281d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d22eb4b52e9a336b1ab43b0fec5ce49d = $(`<div id="html_d22eb4b52e9a336b1ab43b0fec5ce49d" style="width: 100.0%; height: 100.0%;">KHB Colony Shopping Complex</div>`)[0];
+            popup_50cbf3125c408c426590fdc90000281d.setContent(html_d22eb4b52e9a336b1ab43b0fec5ce49d);
+        
+
+        marker_65aee6a700ec2916e1c4a6afa05c4e68.bindPopup(popup_50cbf3125c408c426590fdc90000281d)
+        ;
+
+        
+    
+    
+            var marker_17a861743bf0bf8dd10fad1597765cf7 = L.marker(
+                [12.9873734, 77.7354793],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_6034d33badb2b08e4d6f4e1702d44791 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_17a861743bf0bf8dd10fad1597765cf7.setIcon(icon_6034d33badb2b08e4d6f4e1702d44791);
+        
+    
+        var popup_e8736ec3cb473ba77dea845934d86db8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2057a0960025cd20dabb0183615d8a25 = $(`<div id="html_2057a0960025cd20dabb0183615d8a25" style="width: 100.0%; height: 100.0%;">Ascendas ITPL Mall</div>`)[0];
+            popup_e8736ec3cb473ba77dea845934d86db8.setContent(html_2057a0960025cd20dabb0183615d8a25);
+        
+
+        marker_17a861743bf0bf8dd10fad1597765cf7.bindPopup(popup_e8736ec3cb473ba77dea845934d86db8)
+        ;
+
+        
+    
+    
+            var marker_1ca3479c9ddefb1aeb8059d58b64c9b6 = L.marker(
+                [12.9167658, 77.6714026],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_390b44521571beff9d707690be33c3e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1ca3479c9ddefb1aeb8059d58b64c9b6.setIcon(icon_390b44521571beff9d707690be33c3e5);
+        
+    
+        var popup_18d6cf09116cf53571dc2f3f827def4b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2cdf114dd16df7b096ec0a3ce34fc479 = $(`<div id="html_2cdf114dd16df7b096ec0a3ce34fc479" style="width: 100.0%; height: 100.0%;">Total Mall</div>`)[0];
+            popup_18d6cf09116cf53571dc2f3f827def4b.setContent(html_2cdf114dd16df7b096ec0a3ce34fc479);
+        
+
+        marker_1ca3479c9ddefb1aeb8059d58b64c9b6.bindPopup(popup_18d6cf09116cf53571dc2f3f827def4b)
+        ;
+
+        
+    
+    
+            var marker_e466609aa159cc38a5a59013eb138b02 = L.marker(
+                [12.9883416, 77.734053],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_e0392d54b8468d63873ed3017877ff2f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_e466609aa159cc38a5a59013eb138b02.setIcon(icon_e0392d54b8468d63873ed3017877ff2f);
+        
+    
+        var popup_9cb0f57d79177942b856509ab75f0d5b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6132c6a63470d1430c3e354cc12742b = $(`<div id="html_d6132c6a63470d1430c3e354cc12742b" style="width: 100.0%; height: 100.0%;">KIADB Shopping Complex</div>`)[0];
+            popup_9cb0f57d79177942b856509ab75f0d5b.setContent(html_d6132c6a63470d1430c3e354cc12742b);
+        
+
+        marker_e466609aa159cc38a5a59013eb138b02.bindPopup(popup_9cb0f57d79177942b856509ab75f0d5b)
+        ;
+
+        
+    
+    
+            var marker_e4b560119c7ab09754067729066226ba = L.marker(
+                [12.8757979, 77.5960039],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_6d5df24795bf0a40d1f8c279c05c9f2a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_e4b560119c7ab09754067729066226ba.setIcon(icon_6d5df24795bf0a40d1f8c279c05c9f2a);
+        
+    
+        var popup_1b9514254df23e043e40e34510f65f83 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b165f7b274976e66e5c926d9b2b3bdd4 = $(`<div id="html_b165f7b274976e66e5c926d9b2b3bdd4" style="width: 100.0%; height: 100.0%;">Royal Meenakshi Mall</div>`)[0];
+            popup_1b9514254df23e043e40e34510f65f83.setContent(html_b165f7b274976e66e5c926d9b2b3bdd4);
+        
+
+        marker_e4b560119c7ab09754067729066226ba.bindPopup(popup_1b9514254df23e043e40e34510f65f83)
+        ;
+
+        
+    
+    
+            var marker_0157163d3ffc7d6a2096e18a0c46c41e = L.marker(
+                [13.0715068, 77.5062401],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_152e35081600941f82afc60b4115faf4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0157163d3ffc7d6a2096e18a0c46c41e.setIcon(icon_152e35081600941f82afc60b4115faf4);
+        
+    
+        var popup_01c96d0794149cb708ddf4c07f4ed30f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ad4f0c688e57d27aa7b0ee99bd53a147 = $(`<div id="html_ad4f0c688e57d27aa7b0ee99bd53a147" style="width: 100.0%; height: 100.0%;">LAV KUSH SHOPPING CENTER</div>`)[0];
+            popup_01c96d0794149cb708ddf4c07f4ed30f.setContent(html_ad4f0c688e57d27aa7b0ee99bd53a147);
+        
+
+        marker_0157163d3ffc7d6a2096e18a0c46c41e.bindPopup(popup_01c96d0794149cb708ddf4c07f4ed30f)
+        ;
+
+        
+    
+    
+            var marker_6b49f8ac05d60ef07b5340cf2585d913 = L.marker(
+                [12.9817451, 77.5637925],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_3b28f7a9064b0b6f4b96133bd3c7781e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6b49f8ac05d60ef07b5340cf2585d913.setIcon(icon_3b28f7a9064b0b6f4b96133bd3c7781e);
+        
+    
+        var popup_63bc08977fb23040ad93b333bbe992ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aea827009285d919e5ec89732905ecab = $(`<div id="html_aea827009285d919e5ec89732905ecab" style="width: 100.0%; height: 100.0%;">Global Malls</div>`)[0];
+            popup_63bc08977fb23040ad93b333bbe992ab.setContent(html_aea827009285d919e5ec89732905ecab);
+        
+
+        marker_6b49f8ac05d60ef07b5340cf2585d913.bindPopup(popup_63bc08977fb23040ad93b333bbe992ab)
+        ;
+
+        
+    
+    
+            var marker_bb3222677f5e49914805fb87915b4377 = L.marker(
+                [12.9716428, 77.5959367],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_c2a20459a9102f52c2e2408602ac4639 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_bb3222677f5e49914805fb87915b4377.setIcon(icon_c2a20459a9102f52c2e2408602ac4639);
+        
+    
+        var popup_9511a74eb55525ed2bd25ad16349083f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1a76b1180bf6dc6806612a12c5a87d8b = $(`<div id="html_1a76b1180bf6dc6806612a12c5a87d8b" style="width: 100.0%; height: 100.0%;">UB City</div>`)[0];
+            popup_9511a74eb55525ed2bd25ad16349083f.setContent(html_1a76b1180bf6dc6806612a12c5a87d8b);
+        
+
+        marker_bb3222677f5e49914805fb87915b4377.bindPopup(popup_9511a74eb55525ed2bd25ad16349083f)
+        ;
+
+        
+    
+    
+            var marker_0a3f5012d9e2cb1963c839f5f319dbda = L.marker(
+                [12.9611286, 77.6470963],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_d22cb512aa5a0099b6641ea9bebb95f7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0a3f5012d9e2cb1963c839f5f319dbda.setIcon(icon_d22cb512aa5a0099b6641ea9bebb95f7);
+        
+    
+        var popup_1192bfcf26a56d82e5e4425f63d964eb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d82b0563c8b10f52dada34fac436c305 = $(`<div id="html_d82b0563c8b10f52dada34fac436c305" style="width: 100.0%; height: 100.0%;">leela fashion (cloth center)</div>`)[0];
+            popup_1192bfcf26a56d82e5e4425f63d964eb.setContent(html_d82b0563c8b10f52dada34fac436c305);
+        
+
+        marker_0a3f5012d9e2cb1963c839f5f319dbda.bindPopup(popup_1192bfcf26a56d82e5e4425f63d964eb)
+        ;
+
+        
+    
+    
+            var marker_2821445d81e01ff84d22ffa993276405 = L.marker(
+                [12.9566943, 77.7008391],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_a3a6aa10dd9410ff4c199dcce077b7b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2821445d81e01ff84d22ffa993276405.setIcon(icon_a3a6aa10dd9410ff4c199dcce077b7b8);
+        
+    
+        var popup_a0024a38a479de1202ed5b2e63607d22 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aa3f272f084df994f7adbe63afeb62c6 = $(`<div id="html_aa3f272f084df994f7adbe63afeb62c6" style="width: 100.0%; height: 100.0%;">KLM Fashion Mall, Marathahalli</div>`)[0];
+            popup_a0024a38a479de1202ed5b2e63607d22.setContent(html_aa3f272f084df994f7adbe63afeb62c6);
+        
+
+        marker_2821445d81e01ff84d22ffa993276405.bindPopup(popup_a0024a38a479de1202ed5b2e63607d22)
+        ;
+
+        
+    
+    
+            var marker_283a29cbed80aecd74eaca16b155513a = L.marker(
+                [12.9735984, 77.6111859],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_dfc5d4dc6ba617da1148a9b5be158831 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_283a29cbed80aecd74eaca16b155513a.setIcon(icon_dfc5d4dc6ba617da1148a9b5be158831);
+        
+    
+        var popup_4c678ae4fbefef2f3144a0dfc9297c67 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bada294d189af1a4937acfb8855242ed = $(`<div id="html_bada294d189af1a4937acfb8855242ed" style="width: 100.0%; height: 100.0%;">Central</div>`)[0];
+            popup_4c678ae4fbefef2f3144a0dfc9297c67.setContent(html_bada294d189af1a4937acfb8855242ed);
+        
+
+        marker_283a29cbed80aecd74eaca16b155513a.bindPopup(popup_4c678ae4fbefef2f3144a0dfc9297c67)
+        ;
+
+        
+    
+    
+            var marker_581de78f7b00704027ae154707cdd942 = L.marker(
+                [12.8416926, 77.676922],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_d91ae970d14b125761de7e32d6e2d659 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_581de78f7b00704027ae154707cdd942.setIcon(icon_d91ae970d14b125761de7e32d6e2d659);
+        
+    
+        var popup_77aa90b7e5e86a21f5e3a023d5bb2bc8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21bc903b7b7cca77d94aa3289227a37d = $(`<div id="html_21bc903b7b7cca77d94aa3289227a37d" style="width: 100.0%; height: 100.0%;">M5 Ecity Mall</div>`)[0];
+            popup_77aa90b7e5e86a21f5e3a023d5bb2bc8.setContent(html_21bc903b7b7cca77d94aa3289227a37d);
+        
+
+        marker_581de78f7b00704027ae154707cdd942.bindPopup(popup_77aa90b7e5e86a21f5e3a023d5bb2bc8)
+        ;
+
+        
+    
+    
+            var marker_a2c8c4e573c1aa95752d170757d9de29 = L.marker(
+                [12.8892684, 77.63991],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_57fbab0b48dc4b27ebe18f8770259725 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a2c8c4e573c1aa95752d170757d9de29.setIcon(icon_57fbab0b48dc4b27ebe18f8770259725);
+        
+    
+        var popup_6b8653543f0cc6b846dd820b2684d19b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c0b0432a16aa5b0b2d774b4e9a208b29 = $(`<div id="html_c0b0432a16aa5b0b2d774b4e9a208b29" style="width: 100.0%; height: 100.0%;">SHOPPING MALL</div>`)[0];
+            popup_6b8653543f0cc6b846dd820b2684d19b.setContent(html_c0b0432a16aa5b0b2d774b4e9a208b29);
+        
+
+        marker_a2c8c4e573c1aa95752d170757d9de29.bindPopup(popup_6b8653543f0cc6b846dd820b2684d19b)
+        ;
+
+        
+    
+    
+            var marker_33c4af4e9f183ed2029b0971fc397e26 = L.marker(
+                [13.0694802, 77.5450018],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_1ab428ae301a1629a9e78db8249c72f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_33c4af4e9f183ed2029b0971fc397e26.setIcon(icon_1ab428ae301a1629a9e78db8249c72f9);
+        
+    
+        var popup_6e8fc1395e345707014ba38ebbd91bce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2dfef40c3dce18454964f181543b7663 = $(`<div id="html_2dfef40c3dce18454964f181543b7663" style="width: 100.0%; height: 100.0%;">Air Force Akshaya Shopping Center</div>`)[0];
+            popup_6e8fc1395e345707014ba38ebbd91bce.setContent(html_2dfef40c3dce18454964f181543b7663);
+        
+
+        marker_33c4af4e9f183ed2029b0971fc397e26.bindPopup(popup_6e8fc1395e345707014ba38ebbd91bce)
+        ;
+
+        
+    
+    
+            var marker_3903859ae76e948b79084de03a68d957 = L.marker(
+                [12.9916302, 77.5711719],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_55d982c16c96eb0caeb8be1c7fa4a3aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3903859ae76e948b79084de03a68d957.setIcon(icon_55d982c16c96eb0caeb8be1c7fa4a3aa);
+        
+    
+        var popup_5cfbbc77e72536f23d6421d886705521 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_954cc87934751491a0c2a86a6b060a0f = $(`<div id="html_954cc87934751491a0c2a86a6b060a0f" style="width: 100.0%; height: 100.0%;">Mantri Square Mall</div>`)[0];
+            popup_5cfbbc77e72536f23d6421d886705521.setContent(html_954cc87934751491a0c2a86a6b060a0f);
+        
+
+        marker_3903859ae76e948b79084de03a68d957.bindPopup(popup_5cfbbc77e72536f23d6421d886705521)
+        ;
+
+        
+    
+    
+            var marker_1b8a105958be0a43185ce02865fbf005 = L.marker(
+                [13.0975167, 77.5838725],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_dca8708c460fb0cba2228d9c24a949a6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1b8a105958be0a43185ce02865fbf005.setIcon(icon_dca8708c460fb0cba2228d9c24a949a6);
+        
+    
+        var popup_87360d633bc6b18ac35d94f6b8c3cd30 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_10f32ea32102750e53ae96fcd551e9c3 = $(`<div id="html_10f32ea32102750e53ae96fcd551e9c3" style="width: 100.0%; height: 100.0%;">Garuda Mall</div>`)[0];
+            popup_87360d633bc6b18ac35d94f6b8c3cd30.setContent(html_10f32ea32102750e53ae96fcd551e9c3);
+        
+
+        marker_1b8a105958be0a43185ce02865fbf005.bindPopup(popup_87360d633bc6b18ac35d94f6b8c3cd30)
+        ;
+
+        
+    
+    
+            var marker_b10baf71702a69018a4205949d9bb1b4 = L.marker(
+                [13.0416076, 77.59485],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_ac2b25e4df8d8dfdc2d6739f6e552bed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b10baf71702a69018a4205949d9bb1b4.setIcon(icon_ac2b25e4df8d8dfdc2d6739f6e552bed);
+        
+    
+        var popup_ad9496e0c6ee331224de9c2b08a2a13a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_57660dbcef84f96f7aa3cd78bac7d35d = $(`<div id="html_57660dbcef84f96f7aa3cd78bac7d35d" style="width: 100.0%; height: 100.0%;">City Centre</div>`)[0];
+            popup_ad9496e0c6ee331224de9c2b08a2a13a.setContent(html_57660dbcef84f96f7aa3cd78bac7d35d);
+        
+
+        marker_b10baf71702a69018a4205949d9bb1b4.bindPopup(popup_ad9496e0c6ee331224de9c2b08a2a13a)
+        ;
+
+        
+    
+    
+            var marker_3219831e996abfaca195f94ad4592014 = L.marker(
+                [12.9589133, 77.656891],
+                {}
+            ).addTo(map_112e4d64b7741c84eef67dd24fcfb320);
+        
+    
+            var icon_bc51b65b043f827f3140118607308409 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3219831e996abfaca195f94ad4592014.setIcon(icon_bc51b65b043f827f3140118607308409);
+        
+    
+        var popup_30ed76be15205e7c84dd122bc3867af8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_704d86773edc23d51c0e4525d008dbca = $(`<div id="html_704d86773edc23d51c0e4525d008dbca" style="width: 100.0%; height: 100.0%;">Kemp Fort Mall</div>`)[0];
+            popup_30ed76be15205e7c84dd122bc3867af8.setContent(html_704d86773edc23d51c0e4525d008dbca);
+        
+
+        marker_3219831e996abfaca195f94ad4592014.bindPopup(popup_30ed76be15205e7c84dd122bc3867af8)
+        ;
+
+        
+    
+    
+            map_112e4d64b7741c84eef67dd24fcfb320.fitBounds(
+                [[12.8416926, 77.5062401], [13.0983706, 77.7479488]],
+                {}
+            );
+        
+</script>

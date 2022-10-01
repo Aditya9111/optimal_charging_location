@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_37d9628d2db96464ffe0e3812d97261a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@master/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_37d9628d2db96464ffe0e3812d97261a" ></div>
+        
+</body>
+<script>    
+    
+            var map_37d9628d2db96464ffe0e3812d97261a = L.map(
+                "map_37d9628d2db96464ffe0e3812d97261a",
+                {
+                    center: [12.9716, 77.5946],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0e5624212c9f04282dad3249d01cc173 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var heat_map_7cccc4f2712991669dabae764b8fff8c = L.heatLayer(
+                [[13.0129735, 77.5687129], [13.0579537, 77.5923], [13.0279498, 77.6206521], [12.9702626, 77.6099629], [13.0613184, 77.5770436], [13.0362518, 77.5046093], [13.0095328, 77.4830283], [13.0334762, 77.6140776], [13.0170132, 77.6182944], [13.049016, 77.5935633], [13.054295, 77.6090278], [13.0450957, 77.6268964], [13.0262852, 77.6351286], [12.9973248, 77.6007692], [12.9794698, 77.6072556], [12.9746845, 77.6078674], [12.9792305, 77.5939743], [12.9749803, 77.5834875], [12.973252, 77.57803], [12.9817451, 77.5637925], [12.9771132, 77.5704966], [12.9818734, 77.609643], [12.9719608, 77.6072636], [12.9621863, 77.5775654], [12.9656637, 77.5862436], [12.9654449, 77.5583468], [12.9575984, 77.5591493], [12.9453246, 77.5897425], [12.9455112, 77.5959492], [12.9392187, 77.5914604], [12.9331129, 77.5876634], [12.9338496, 77.6041737], [12.928863, 77.6182811], [12.9242855, 77.6145204], [12.9065361, 77.603314], [12.8917028, 77.6165712], [12.9036068, 77.6410712], [12.8605509, 77.7824534], [12.8838648, 77.5508339], [12.8579407, 77.5831473], [12.9324889, 77.5161326], [12.9384348, 77.5216242], [12.9678953, 77.5790645], [12.964654, 77.586791], [12.9007332, 77.6502779], [12.8712692, 77.6446456], [12.8917417, 77.5774291], [12.8838648, 77.5508339], [12.8893805, 77.6199973], [12.8990473, 77.6584243], [12.9410958, 77.6958901], [12.8757979, 77.5960039], [12.9395961, 77.7271832], [12.8435696, 77.6628059], [12.9924896, 77.7126209], [12.934224, 77.7021609]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var marker_609dc15d312db5ae949c84bb46592c7a = L.marker(
+                [13.0129735, 77.5687129],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_f6a847deb76f20bb261dbbb483d6c087 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_609dc15d312db5ae949c84bb46592c7a.setIcon(icon_f6a847deb76f20bb261dbbb483d6c087);
+        
+    
+        var popup_773a0bbf45bf5aa8ac4f2337160bbd15 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e9a03903e6520dcdda161135875488b = $(`<div id="html_8e9a03903e6520dcdda161135875488b" style="width: 100.0%; height: 100.0%;">Parking Lot</div>`)[0];
+            popup_773a0bbf45bf5aa8ac4f2337160bbd15.setContent(html_8e9a03903e6520dcdda161135875488b);
+        
+
+        marker_609dc15d312db5ae949c84bb46592c7a.bindPopup(popup_773a0bbf45bf5aa8ac4f2337160bbd15)
+        ;
+
+        
+    
+    
+            var marker_0b6d7bc4c55ee2bb7d2723979490e00a = L.marker(
+                [13.0579537, 77.5923],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_b7c3b73b23d1737de3fdf6a9283279bf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0b6d7bc4c55ee2bb7d2723979490e00a.setIcon(icon_b7c3b73b23d1737de3fdf6a9283279bf);
+        
+    
+        var popup_ca30c1db92522ab0627754fba1ad97b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bfcaf44cc2382c4216ba25ccfb9c70bd = $(`<div id="html_bfcaf44cc2382c4216ba25ccfb9c70bd" style="width: 100.0%; height: 100.0%;">Parking, More Mega Store</div>`)[0];
+            popup_ca30c1db92522ab0627754fba1ad97b2.setContent(html_bfcaf44cc2382c4216ba25ccfb9c70bd);
+        
+
+        marker_0b6d7bc4c55ee2bb7d2723979490e00a.bindPopup(popup_ca30c1db92522ab0627754fba1ad97b2)
+        ;
+
+        
+    
+    
+            var marker_1988fa2ba454edf16ca6da12985c4dc6 = L.marker(
+                [13.0279498, 77.6206521],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_449bc1f421993f5a24b84db2b461efaa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1988fa2ba454edf16ca6da12985c4dc6.setIcon(icon_449bc1f421993f5a24b84db2b461efaa);
+        
+    
+        var popup_ad3be1d224332bdab5b6833b362fce0f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_05a973dcac53180f90e1d490a5b7b462 = $(`<div id="html_05a973dcac53180f90e1d490a5b7b462" style="width: 100.0%; height: 100.0%;">GASPLUS Auto LPG station</div>`)[0];
+            popup_ad3be1d224332bdab5b6833b362fce0f.setContent(html_05a973dcac53180f90e1d490a5b7b462);
+        
+
+        marker_1988fa2ba454edf16ca6da12985c4dc6.bindPopup(popup_ad3be1d224332bdab5b6833b362fce0f)
+        ;
+
+        
+    
+    
+            var marker_65077559e350b76e6b4bbe494fb1ca67 = L.marker(
+                [12.9702626, 77.6099629],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_f90141793da8a7150ab3627996713c09 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_65077559e350b76e6b4bbe494fb1ca67.setIcon(icon_f90141793da8a7150ab3627996713c09);
+        
+    
+        var popup_5d76aaf81539709e9b761c13154381da = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb04d016d0fbcaf62751dd75d83da164 = $(`<div id="html_eb04d016d0fbcaf62751dd75d83da164" style="width: 100.0%; height: 100.0%;">Garuda Mall</div>`)[0];
+            popup_5d76aaf81539709e9b761c13154381da.setContent(html_eb04d016d0fbcaf62751dd75d83da164);
+        
+
+        marker_65077559e350b76e6b4bbe494fb1ca67.bindPopup(popup_5d76aaf81539709e9b761c13154381da)
+        ;
+
+        
+    
+    
+            var marker_f5ab943336ecd5e9f5c099128dca2593 = L.marker(
+                [13.0613184, 77.5770436],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_2b2acef1022268d9cdbe6978c3d5f630 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f5ab943336ecd5e9f5c099128dca2593.setIcon(icon_2b2acef1022268d9cdbe6978c3d5f630);
+        
+    
+        var popup_c3f4efec07a2aeda277e8a1e29c77361 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4dda4de85c72bb66268122cf0d9da9ae = $(`<div id="html_4dda4de85c72bb66268122cf0d9da9ae" style="width: 100.0%; height: 100.0%;">Silicon Valley Pre University College</div>`)[0];
+            popup_c3f4efec07a2aeda277e8a1e29c77361.setContent(html_4dda4de85c72bb66268122cf0d9da9ae);
+        
+
+        marker_f5ab943336ecd5e9f5c099128dca2593.bindPopup(popup_c3f4efec07a2aeda277e8a1e29c77361)
+        ;
+
+        
+    
+    
+            var marker_02f5108cef2f104d7ca4c74f3f926b37 = L.marker(
+                [13.0362518, 77.5046093],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_2b8d14b255c376b3a156f42666e6b1d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_02f5108cef2f104d7ca4c74f3f926b37.setIcon(icon_2b8d14b255c376b3a156f42666e6b1d6);
+        
+    
+        var popup_b6ad502479caeb6586eeb5878d2b4236 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec0d72bcd44de72a9df7b638ff5e25c7 = $(`<div id="html_ec0d72bcd44de72a9df7b638ff5e25c7" style="width: 100.0%; height: 100.0%;">Christ University Yeshwanthpur Campus</div>`)[0];
+            popup_b6ad502479caeb6586eeb5878d2b4236.setContent(html_ec0d72bcd44de72a9df7b638ff5e25c7);
+        
+
+        marker_02f5108cef2f104d7ca4c74f3f926b37.bindPopup(popup_b6ad502479caeb6586eeb5878d2b4236)
+        ;
+
+        
+    
+    
+            var marker_2d5890b6083bcf3253a649d778c9920d = L.marker(
+                [13.0095328, 77.4830283],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_933bf355ee0a0d9341deb4d0833d0704 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2d5890b6083bcf3253a649d778c9920d.setIcon(icon_933bf355ee0a0d9341deb4d0833d0704);
+        
+    
+        var popup_bb3b27f27ca32d8151017606774e3948 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dd231286100c749163299984fec20d42 = $(`<div id="html_dd231286100c749163299984fec20d42" style="width: 100.0%; height: 100.0%;">BPCL - Manjunatha Fuel station</div>`)[0];
+            popup_bb3b27f27ca32d8151017606774e3948.setContent(html_dd231286100c749163299984fec20d42);
+        
+
+        marker_2d5890b6083bcf3253a649d778c9920d.bindPopup(popup_bb3b27f27ca32d8151017606774e3948)
+        ;
+
+        
+    
+    
+            var marker_6bbdda7247c40a8577b1d9704dc98797 = L.marker(
+                [13.0334762, 77.6140776],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_a25bedda299f00a757e86e91ddcb2b58 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6bbdda7247c40a8577b1d9704dc98797.setIcon(icon_a25bedda299f00a757e86e91ddcb2b58);
+        
+    
+        var popup_971d3adbb46dce22f41b776c05dacfc2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c941e3a995986fde1e3f20eef876c2d9 = $(`<div id="html_c941e3a995986fde1e3f20eef876c2d9" style="width: 100.0%; height: 100.0%;">CRESCENT HARMONY APARTMENT</div>`)[0];
+            popup_971d3adbb46dce22f41b776c05dacfc2.setContent(html_c941e3a995986fde1e3f20eef876c2d9);
+        
+
+        marker_6bbdda7247c40a8577b1d9704dc98797.bindPopup(popup_971d3adbb46dce22f41b776c05dacfc2)
+        ;
+
+        
+    
+    
+            var marker_b23f2c4dc7ccfb2bb24a5cd558e1d59e = L.marker(
+                [13.0170132, 77.6182944],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_61bb1c24fece934fd5ebd7389d284ae6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b23f2c4dc7ccfb2bb24a5cd558e1d59e.setIcon(icon_61bb1c24fece934fd5ebd7389d284ae6);
+        
+    
+        var popup_0f05f914fa12a96fab23ce33c0e3129e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_43bad3bb8508b98fa23ac7e34081abe3 = $(`<div id="html_43bad3bb8508b98fa23ac7e34081abe3" style="width: 100.0%; height: 100.0%;">Harmony Apartment</div>`)[0];
+            popup_0f05f914fa12a96fab23ce33c0e3129e.setContent(html_43bad3bb8508b98fa23ac7e34081abe3);
+        
+
+        marker_b23f2c4dc7ccfb2bb24a5cd558e1d59e.bindPopup(popup_0f05f914fa12a96fab23ce33c0e3129e)
+        ;
+
+        
+    
+    
+            var marker_7af399833acbcd509a65fd2b6d15d063 = L.marker(
+                [13.049016, 77.5935633],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_42591ff5e1cd58835b378354e9b9eea2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7af399833acbcd509a65fd2b6d15d063.setIcon(icon_42591ff5e1cd58835b378354e9b9eea2);
+        
+    
+        var popup_72f35cf91d270c1bb887a2b41c9a7f18 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_32e1b54192115e8b194ea59080ddb93b = $(`<div id="html_32e1b54192115e8b194ea59080ddb93b" style="width: 100.0%; height: 100.0%;">Esteem Mall</div>`)[0];
+            popup_72f35cf91d270c1bb887a2b41c9a7f18.setContent(html_32e1b54192115e8b194ea59080ddb93b);
+        
+
+        marker_7af399833acbcd509a65fd2b6d15d063.bindPopup(popup_72f35cf91d270c1bb887a2b41c9a7f18)
+        ;
+
+        
+    
+    
+            var marker_dd688bf97a43d8534a4dd4e61173fb40 = L.marker(
+                [13.054295, 77.6090278],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_dd5bc6b0db4b3a0ffde13c7c208b89ef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_dd688bf97a43d8534a4dd4e61173fb40.setIcon(icon_dd5bc6b0db4b3a0ffde13c7c208b89ef);
+        
+    
+        var popup_473f41ce5379a643aed0df69e6cd0687 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_083b1a3db885605ad5cbac1cab18d2bf = $(`<div id="html_083b1a3db885605ad5cbac1cab18d2bf" style="width: 100.0%; height: 100.0%;">Unnati Apartment</div>`)[0];
+            popup_473f41ce5379a643aed0df69e6cd0687.setContent(html_083b1a3db885605ad5cbac1cab18d2bf);
+        
+
+        marker_dd688bf97a43d8534a4dd4e61173fb40.bindPopup(popup_473f41ce5379a643aed0df69e6cd0687)
+        ;
+
+        
+    
+    
+            var marker_0851206feec1c3490068b53948a224c4 = L.marker(
+                [13.0450957, 77.6268964],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_b4e60b1dddc2adb7e74c20cd5afd3239 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0851206feec1c3490068b53948a224c4.setIcon(icon_b4e60b1dddc2adb7e74c20cd5afd3239);
+        
+    
+        var popup_32deec565ca1b403fb9e30652f4e21e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a67d2c0f94d087d8c4176fb1b5a7e7f = $(`<div id="html_6a67d2c0f94d087d8c4176fb1b5a7e7f" style="width: 100.0%; height: 100.0%;">Elements Mall</div>`)[0];
+            popup_32deec565ca1b403fb9e30652f4e21e6.setContent(html_6a67d2c0f94d087d8c4176fb1b5a7e7f);
+        
+
+        marker_0851206feec1c3490068b53948a224c4.bindPopup(popup_32deec565ca1b403fb9e30652f4e21e6)
+        ;
+
+        
+    
+    
+            var marker_4af89d046572621da759e3bda0071593 = L.marker(
+                [13.0262852, 77.6351286],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_23ea0dd5e9c0902c5f0ef86821c6a6fd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_4af89d046572621da759e3bda0071593.setIcon(icon_23ea0dd5e9c0902c5f0ef86821c6a6fd);
+        
+    
+        var popup_de4b23b7131eca5bc9462e279c3a334c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cd78945567712cd53e3b14d4394f2da1 = $(`<div id="html_cd78945567712cd53e3b14d4394f2da1" style="width: 100.0%; height: 100.0%;">BP Petrol Pump</div>`)[0];
+            popup_de4b23b7131eca5bc9462e279c3a334c.setContent(html_cd78945567712cd53e3b14d4394f2da1);
+        
+
+        marker_4af89d046572621da759e3bda0071593.bindPopup(popup_de4b23b7131eca5bc9462e279c3a334c)
+        ;
+
+        
+    
+    
+            var marker_9e801b44bc2578da8551960a45880880 = L.marker(
+                [12.9973248, 77.6007692],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_e1efd06bad0c8451427905049ea8ff82 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9e801b44bc2578da8551960a45880880.setIcon(icon_e1efd06bad0c8451427905049ea8ff82);
+        
+    
+        var popup_f61eaf1e37593a6a6e913ce82fff1566 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_287bf9574f00510acc68bf8452483ee7 = $(`<div id="html_287bf9574f00510acc68bf8452483ee7" style="width: 100.0%; height: 100.0%;">Rezervd Smart Parking</div>`)[0];
+            popup_f61eaf1e37593a6a6e913ce82fff1566.setContent(html_287bf9574f00510acc68bf8452483ee7);
+        
+
+        marker_9e801b44bc2578da8551960a45880880.bindPopup(popup_f61eaf1e37593a6a6e913ce82fff1566)
+        ;
+
+        
+    
+    
+            var marker_3dc150c5165084f8bb8104654cd126a1 = L.marker(
+                [12.9794698, 77.6072556],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_8adc8334e0b7f75e3fbf9f2360ec5a85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3dc150c5165084f8bb8104654cd126a1.setIcon(icon_8adc8334e0b7f75e3fbf9f2360ec5a85);
+        
+    
+        var popup_bfccfb38bc923151fb9e8a0201c9a84f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ee40667961d22b5cd810fb03b02db414 = $(`<div id="html_ee40667961d22b5cd810fb03b02db414" style="width: 100.0%; height: 100.0%;">Car Parking</div>`)[0];
+            popup_bfccfb38bc923151fb9e8a0201c9a84f.setContent(html_ee40667961d22b5cd810fb03b02db414);
+        
+
+        marker_3dc150c5165084f8bb8104654cd126a1.bindPopup(popup_bfccfb38bc923151fb9e8a0201c9a84f)
+        ;
+
+        
+    
+    
+            var marker_c0b98c6806501c75341f97ba1ed13575 = L.marker(
+                [12.9746845, 77.6078674],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_854b5def47047463c4a3fe8b8aae22ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c0b98c6806501c75341f97ba1ed13575.setIcon(icon_854b5def47047463c4a3fe8b8aae22ce);
+        
+    
+        var popup_4a4554bddec2eeefb13917d1c8e9b907 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c134334afda8ebf1637de7c9129f20e4 = $(`<div id="html_c134334afda8ebf1637de7c9129f20e4" style="width: 100.0%; height: 100.0%;">Car Parking</div>`)[0];
+            popup_4a4554bddec2eeefb13917d1c8e9b907.setContent(html_c134334afda8ebf1637de7c9129f20e4);
+        
+
+        marker_c0b98c6806501c75341f97ba1ed13575.bindPopup(popup_4a4554bddec2eeefb13917d1c8e9b907)
+        ;
+
+        
+    
+    
+            var marker_efd8fb5e970c3cc2de52bebefd85b962 = L.marker(
+                [12.9792305, 77.5939743],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_f214475ba8fe4b70ffe3afb015814549 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_efd8fb5e970c3cc2de52bebefd85b962.setIcon(icon_f214475ba8fe4b70ffe3afb015814549);
+        
+    
+        var popup_671151127807da529cf67c456b49811a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4bb3eadcb912c4902ea79ab2f44b65ea = $(`<div id="html_4bb3eadcb912c4902ea79ab2f44b65ea" style="width: 100.0%; height: 100.0%;">Karnataka High Court Parking Ground</div>`)[0];
+            popup_671151127807da529cf67c456b49811a.setContent(html_4bb3eadcb912c4902ea79ab2f44b65ea);
+        
+
+        marker_efd8fb5e970c3cc2de52bebefd85b962.bindPopup(popup_671151127807da529cf67c456b49811a)
+        ;
+
+        
+    
+    
+            var marker_aa8daf8365aeaa348a5f196444862df2 = L.marker(
+                [12.9749803, 77.5834875],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_f03cef225068ca1fefcf55af15970e80 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_aa8daf8365aeaa348a5f196444862df2.setIcon(icon_f03cef225068ca1fefcf55af15970e80);
+        
+    
+        var popup_aef634944d0c91902627ef1ee8d53133 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ddeff407498c2ca2592695684a1539d = $(`<div id="html_3ddeff407498c2ca2592695684a1539d" style="width: 100.0%; height: 100.0%;">Bengaluru City University</div>`)[0];
+            popup_aef634944d0c91902627ef1ee8d53133.setContent(html_3ddeff407498c2ca2592695684a1539d);
+        
+
+        marker_aa8daf8365aeaa348a5f196444862df2.bindPopup(popup_aef634944d0c91902627ef1ee8d53133)
+        ;
+
+        
+    
+    
+            var marker_a99615e49294df781b58c83bb5ddf311 = L.marker(
+                [12.973252, 77.57803],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_f1726906c107cc73e8f3b1b390fe8b87 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a99615e49294df781b58c83bb5ddf311.setIcon(icon_f1726906c107cc73e8f3b1b390fe8b87);
+        
+    
+        var popup_262c06204129052401dd1bf896b348a2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b52940440ebe654c1d9fe03df20f8047 = $(`<div id="html_b52940440ebe654c1d9fe03df20f8047" style="width: 100.0%; height: 100.0%;">Car and Bike Parking</div>`)[0];
+            popup_262c06204129052401dd1bf896b348a2.setContent(html_b52940440ebe654c1d9fe03df20f8047);
+        
+
+        marker_a99615e49294df781b58c83bb5ddf311.bindPopup(popup_262c06204129052401dd1bf896b348a2)
+        ;
+
+        
+    
+    
+            var marker_5e0f4ad8f3ab7c64016a80115ad67cbd = L.marker(
+                [12.9817451, 77.5637925],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_3f9dfb10246b9f3e01a2f1c1432d5dd1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5e0f4ad8f3ab7c64016a80115ad67cbd.setIcon(icon_3f9dfb10246b9f3e01a2f1c1432d5dd1);
+        
+    
+        var popup_7a39ee46f8149be0b7ec1af83121d68a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c0caa7ae133900d02c969fede2ed483b = $(`<div id="html_c0caa7ae133900d02c969fede2ed483b" style="width: 100.0%; height: 100.0%;">Global Malls</div>`)[0];
+            popup_7a39ee46f8149be0b7ec1af83121d68a.setContent(html_c0caa7ae133900d02c969fede2ed483b);
+        
+
+        marker_5e0f4ad8f3ab7c64016a80115ad67cbd.bindPopup(popup_7a39ee46f8149be0b7ec1af83121d68a)
+        ;
+
+        
+    
+    
+            var marker_8ef0140f1eb2b63e3ecd9fb19c1e3ff4 = L.marker(
+                [12.9771132, 77.5704966],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_4570940598773be60818b8621d995d00 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8ef0140f1eb2b63e3ecd9fb19c1e3ff4.setIcon(icon_4570940598773be60818b8621d995d00);
+        
+    
+        var popup_a6b8e0bc6c87bae295eec84683efc70b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_29886fb588c0fb125a36c56dff854d6e = $(`<div id="html_29886fb588c0fb125a36c56dff854d6e" style="width: 100.0%; height: 100.0%;">Sri Rampuram Shopping Complex</div>`)[0];
+            popup_a6b8e0bc6c87bae295eec84683efc70b.setContent(html_29886fb588c0fb125a36c56dff854d6e);
+        
+
+        marker_8ef0140f1eb2b63e3ecd9fb19c1e3ff4.bindPopup(popup_a6b8e0bc6c87bae295eec84683efc70b)
+        ;
+
+        
+    
+    
+            var marker_5442a10c964d0926124c4c4a98bd6524 = L.marker(
+                [12.9818734, 77.609643],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_c6996c90b5ec62cb5d206d75d720e048 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5442a10c964d0926124c4c4a98bd6524.setIcon(icon_c6996c90b5ec62cb5d206d75d720e048);
+        
+    
+        var popup_12c78c8e9a687c7bd714d3367b332779 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0096d763e04721c8a5d152c6f5807b0b = $(`<div id="html_0096d763e04721c8a5d152c6f5807b0b" style="width: 100.0%; height: 100.0%;">100rs Shop</div>`)[0];
+            popup_12c78c8e9a687c7bd714d3367b332779.setContent(html_0096d763e04721c8a5d152c6f5807b0b);
+        
+
+        marker_5442a10c964d0926124c4c4a98bd6524.bindPopup(popup_12c78c8e9a687c7bd714d3367b332779)
+        ;
+
+        
+    
+    
+            var marker_064adcb84e444c695cfcb429dfbeb038 = L.marker(
+                [12.9719608, 77.6072636],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_5a91231b86f15219d7b02ec687ffb7ec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_064adcb84e444c695cfcb429dfbeb038.setIcon(icon_5a91231b86f15219d7b02ec687ffb7ec);
+        
+    
+        var popup_fc145e463099a550ce4e2123ca5852eb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5ce6a1f9c2ec4c3ff2e2e5e0d651de08 = $(`<div id="html_5ce6a1f9c2ec4c3ff2e2e5e0d651de08" style="width: 100.0%; height: 100.0%;">Pay And Park</div>`)[0];
+            popup_fc145e463099a550ce4e2123ca5852eb.setContent(html_5ce6a1f9c2ec4c3ff2e2e5e0d651de08);
+        
+
+        marker_064adcb84e444c695cfcb429dfbeb038.bindPopup(popup_fc145e463099a550ce4e2123ca5852eb)
+        ;
+
+        
+    
+    
+            var marker_c762cbc41a2972f5c05e57c21e2ee835 = L.marker(
+                [12.9621863, 77.5775654],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_4792692e20906ebf9e3cec4927ba508f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c762cbc41a2972f5c05e57c21e2ee835.setIcon(icon_4792692e20906ebf9e3cec4927ba508f);
+        
+    
+        var popup_54965c5fc4b3474c9742070f4484c908 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_343640f10af1a92549cb2928d7338a98 = $(`<div id="html_343640f10af1a92549cb2928d7338a98" style="width: 100.0%; height: 100.0%;">24/7 Pay And park</div>`)[0];
+            popup_54965c5fc4b3474c9742070f4484c908.setContent(html_343640f10af1a92549cb2928d7338a98);
+        
+
+        marker_c762cbc41a2972f5c05e57c21e2ee835.bindPopup(popup_54965c5fc4b3474c9742070f4484c908)
+        ;
+
+        
+    
+    
+            var marker_189c44dabd61e43da17076984b864d52 = L.marker(
+                [12.9656637, 77.5862436],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_362c77434e1a1e10e464ba8a1203d7de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_189c44dabd61e43da17076984b864d52.setIcon(icon_362c77434e1a1e10e464ba8a1203d7de);
+        
+    
+        var popup_9685ea48f924e05afb3b2fea6e9d4121 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_53e365265c0347e2551dea1f392adb54 = $(`<div id="html_53e365265c0347e2551dea1f392adb54" style="width: 100.0%; height: 100.0%;">Shree Bhuvaneshwari Car Parking. SP road paid parking</div>`)[0];
+            popup_9685ea48f924e05afb3b2fea6e9d4121.setContent(html_53e365265c0347e2551dea1f392adb54);
+        
+
+        marker_189c44dabd61e43da17076984b864d52.bindPopup(popup_9685ea48f924e05afb3b2fea6e9d4121)
+        ;
+
+        
+    
+    
+            var marker_d113a19589e9b38333317e7bf5f05ee3 = L.marker(
+                [12.9654449, 77.5583468],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_f122754914dc6264e4455e9ab30e7c85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d113a19589e9b38333317e7bf5f05ee3.setIcon(icon_f122754914dc6264e4455e9ab30e7c85);
+        
+    
+        var popup_b043bbb4624fd1d85017a280bfad7a46 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b2c37488277b16566bc6b98910df671e = $(`<div id="html_b2c37488277b16566bc6b98910df671e" style="width: 100.0%; height: 100.0%;">Olive Tower Parking (Park West)</div>`)[0];
+            popup_b043bbb4624fd1d85017a280bfad7a46.setContent(html_b2c37488277b16566bc6b98910df671e);
+        
+
+        marker_d113a19589e9b38333317e7bf5f05ee3.bindPopup(popup_b043bbb4624fd1d85017a280bfad7a46)
+        ;
+
+        
+    
+    
+            var marker_8ae88a027667d70c432d407438e46c97 = L.marker(
+                [12.9575984, 77.5591493],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_d36c2090ddab082726bdbe72c8545ff7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8ae88a027667d70c432d407438e46c97.setIcon(icon_d36c2090ddab082726bdbe72c8545ff7);
+        
+    
+        var popup_64337b37ba67e5eece1c24a9ccd09326 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e15e537f4a471811d86318fa11ad08ac = $(`<div id="html_e15e537f4a471811d86318fa11ad08ac" style="width: 100.0%; height: 100.0%;">Omkara Fuel Station - Nayara Energy</div>`)[0];
+            popup_64337b37ba67e5eece1c24a9ccd09326.setContent(html_e15e537f4a471811d86318fa11ad08ac);
+        
+
+        marker_8ae88a027667d70c432d407438e46c97.bindPopup(popup_64337b37ba67e5eece1c24a9ccd09326)
+        ;
+
+        
+    
+    
+            var marker_0655b6e109ec321063832e71c8c8cc06 = L.marker(
+                [12.9453246, 77.5897425],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_3d2541faf032d497c2bbaed5f0bffc70 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0655b6e109ec321063832e71c8c8cc06.setIcon(icon_3d2541faf032d497c2bbaed5f0bffc70);
+        
+    
+        var popup_d95c37fc26262e46f9799dbaa0a424e5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cdae094956579795bf0ed99c9542252d = $(`<div id="html_cdae094956579795bf0ed99c9542252d" style="width: 100.0%; height: 100.0%;">Elegance Lalbagh View Apartment</div>`)[0];
+            popup_d95c37fc26262e46f9799dbaa0a424e5.setContent(html_cdae094956579795bf0ed99c9542252d);
+        
+
+        marker_0655b6e109ec321063832e71c8c8cc06.bindPopup(popup_d95c37fc26262e46f9799dbaa0a424e5)
+        ;
+
+        
+    
+    
+            var marker_f55dc6a49d981844d5fc060efb0bc859 = L.marker(
+                [12.9455112, 77.5959492],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_cb0372f94ad79f3924c204c7d906f6ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f55dc6a49d981844d5fc060efb0bc859.setIcon(icon_cb0372f94ad79f3924c204c7d906f6ac);
+        
+    
+        var popup_76a71fe5c45a9e647ef5626bed6e2623 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a41ae1d19abcaa9660bd1bc0ae7b18f7 = $(`<div id="html_a41ae1d19abcaa9660bd1bc0ae7b18f7" style="width: 100.0%; height: 100.0%;">Brand Factory 2 Wheeler Parking</div>`)[0];
+            popup_76a71fe5c45a9e647ef5626bed6e2623.setContent(html_a41ae1d19abcaa9660bd1bc0ae7b18f7);
+        
+
+        marker_f55dc6a49d981844d5fc060efb0bc859.bindPopup(popup_76a71fe5c45a9e647ef5626bed6e2623)
+        ;
+
+        
+    
+    
+            var marker_5007220290d160320d2027aef5d536c7 = L.marker(
+                [12.9392187, 77.5914604],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_1d8e924c6b58ba64be32a127cc5b61ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5007220290d160320d2027aef5d536c7.setIcon(icon_1d8e924c6b58ba64be32a127cc5b61ee);
+        
+    
+        var popup_342ed1b7b04d81ff098ccdbaa0494c23 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6c770394b89357f5a4029fa43c1795ad = $(`<div id="html_6c770394b89357f5a4029fa43c1795ad" style="width: 100.0%; height: 100.0%;">SDS TRC Staff Car Parking</div>`)[0];
+            popup_342ed1b7b04d81ff098ccdbaa0494c23.setContent(html_6c770394b89357f5a4029fa43c1795ad);
+        
+
+        marker_5007220290d160320d2027aef5d536c7.bindPopup(popup_342ed1b7b04d81ff098ccdbaa0494c23)
+        ;
+
+        
+    
+    
+            var marker_25e8bad4ffda781c957d6a9b4e143699 = L.marker(
+                [12.9331129, 77.5876634],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_45e7ef30272a92395d713473aee928e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_25e8bad4ffda781c957d6a9b4e143699.setIcon(icon_45e7ef30272a92395d713473aee928e7);
+        
+    
+        var popup_c3b324efd355d3f35c9eab74a7f4a82b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7ed1599c8409d4c4339c916b4177a0f1 = $(`<div id="html_7ed1599c8409d4c4339c916b4177a0f1" style="width: 100.0%; height: 100.0%;">Bangalore Apartments</div>`)[0];
+            popup_c3b324efd355d3f35c9eab74a7f4a82b.setContent(html_7ed1599c8409d4c4339c916b4177a0f1);
+        
+
+        marker_25e8bad4ffda781c957d6a9b4e143699.bindPopup(popup_c3b324efd355d3f35c9eab74a7f4a82b)
+        ;
+
+        
+    
+    
+            var marker_9416bc968a837a91e6424a4131966513 = L.marker(
+                [12.9338496, 77.6041737],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_69da3a2b171b148885035c18b1480e16 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9416bc968a837a91e6424a4131966513.setIcon(icon_69da3a2b171b148885035c18b1480e16);
+        
+    
+        var popup_05d5bd074860d7d64a18d8c1565e2660 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_50d654ec9e459af7f38ea43c71c05786 = $(`<div id="html_50d654ec9e459af7f38ea43c71c05786" style="width: 100.0%; height: 100.0%;">Christ College Parking Lot</div>`)[0];
+            popup_05d5bd074860d7d64a18d8c1565e2660.setContent(html_50d654ec9e459af7f38ea43c71c05786);
+        
+
+        marker_9416bc968a837a91e6424a4131966513.bindPopup(popup_05d5bd074860d7d64a18d8c1565e2660)
+        ;
+
+        
+    
+    
+            var marker_f86c7496d8ef859ae11e466779324784 = L.marker(
+                [12.928863, 77.6182811],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_9ba15aa607f85ed0b725fd79602634c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f86c7496d8ef859ae11e466779324784.setIcon(icon_9ba15aa607f85ed0b725fd79602634c3);
+        
+    
+        var popup_65f247eb04dc516c71e05950370a85a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8bcc98f56c353a8fc75cdb2be9c10e5 = $(`<div id="html_e8bcc98f56c353a8fc75cdb2be9c10e5" style="width: 100.0%; height: 100.0%;">St. John's Paid Parking</div>`)[0];
+            popup_65f247eb04dc516c71e05950370a85a4.setContent(html_e8bcc98f56c353a8fc75cdb2be9c10e5);
+        
+
+        marker_f86c7496d8ef859ae11e466779324784.bindPopup(popup_65f247eb04dc516c71e05950370a85a4)
+        ;
+
+        
+    
+    
+            var marker_99720edd11b621ec6c87c58a7f9747a3 = L.marker(
+                [12.9242855, 77.6145204],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_43fe559c51d30b77573d04937a69226d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_99720edd11b621ec6c87c58a7f9747a3.setIcon(icon_43fe559c51d30b77573d04937a69226d);
+        
+    
+        var popup_49e33e93aa8c36f0758d0ecec0c4bc26 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f00bb080d2a615f0cc452c5f148f72b6 = $(`<div id="html_f00bb080d2a615f0cc452c5f148f72b6" style="width: 100.0%; height: 100.0%;">SUPERGAS Auto LPG Station - Sapthagiri Enterprises</div>`)[0];
+            popup_49e33e93aa8c36f0758d0ecec0c4bc26.setContent(html_f00bb080d2a615f0cc452c5f148f72b6);
+        
+
+        marker_99720edd11b621ec6c87c58a7f9747a3.bindPopup(popup_49e33e93aa8c36f0758d0ecec0c4bc26)
+        ;
+
+        
+    
+    
+            var marker_f658bd3c5f1c68d93370d85b8db9a6c1 = L.marker(
+                [12.9065361, 77.603314],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_35373a94b2de822fdbd400b2871997cb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f658bd3c5f1c68d93370d85b8db9a6c1.setIcon(icon_35373a94b2de822fdbd400b2871997cb);
+        
+    
+        var popup_e84fbf94f097f48fb46de98e9b296f5b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e12648961c5399dc4c7a874ebde7390b = $(`<div id="html_e12648961c5399dc4c7a874ebde7390b" style="width: 100.0%; height: 100.0%;">Sampoorna Shopping Center</div>`)[0];
+            popup_e84fbf94f097f48fb46de98e9b296f5b.setContent(html_e12648961c5399dc4c7a874ebde7390b);
+        
+
+        marker_f658bd3c5f1c68d93370d85b8db9a6c1.bindPopup(popup_e84fbf94f097f48fb46de98e9b296f5b)
+        ;
+
+        
+    
+    
+            var marker_1ec4955580ea48e7f0a86be0540ebffa = L.marker(
+                [12.8917028, 77.6165712],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_34acfa618d2702fd33ca4336afa06179 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1ec4955580ea48e7f0a86be0540ebffa.setIcon(icon_34acfa618d2702fd33ca4336afa06179);
+        
+    
+        var popup_889c4b63cc69b9624b6ba3f15eee3462 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_591f5cb5d6fc15ad492a832ef3be9919 = $(`<div id="html_591f5cb5d6fc15ad492a832ef3be9919" style="width: 100.0%; height: 100.0%;">Pioneer Wood Winds Apartment</div>`)[0];
+            popup_889c4b63cc69b9624b6ba3f15eee3462.setContent(html_591f5cb5d6fc15ad492a832ef3be9919);
+        
+
+        marker_1ec4955580ea48e7f0a86be0540ebffa.bindPopup(popup_889c4b63cc69b9624b6ba3f15eee3462)
+        ;
+
+        
+    
+    
+            var marker_6a0c1b38cf9fa87682dfcd501545fddb = L.marker(
+                [12.9036068, 77.6410712],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_d738e9e37aba6b5f9de334be29c1ee53 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6a0c1b38cf9fa87682dfcd501545fddb.setIcon(icon_d738e9e37aba6b5f9de334be29c1ee53);
+        
+    
+        var popup_694aceb1f8104f6bbe99bba547875a99 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cce65c71034d03b43e2ae1552ce53367 = $(`<div id="html_cce65c71034d03b43e2ae1552ce53367" style="width: 100.0%; height: 100.0%;">Aristo Parking</div>`)[0];
+            popup_694aceb1f8104f6bbe99bba547875a99.setContent(html_cce65c71034d03b43e2ae1552ce53367);
+        
+
+        marker_6a0c1b38cf9fa87682dfcd501545fddb.bindPopup(popup_694aceb1f8104f6bbe99bba547875a99)
+        ;
+
+        
+    
+    
+            var marker_ffabb1caf2b1e38a49cf23b932b60f66 = L.marker(
+                [12.8605509, 77.7824534],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_a2df7d28ea7aadbc37860934e0cad663 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ffabb1caf2b1e38a49cf23b932b60f66.setIcon(icon_a2df7d28ea7aadbc37860934e0cad663);
+        
+    
+        var popup_06a8f76d15207de1b638b0f63e5732ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_064f912d251e5bc402782f6e77e13700 = $(`<div id="html_064f912d251e5bc402782f6e77e13700" style="width: 100.0%; height: 100.0%;">Indian Oil Fuel Station</div>`)[0];
+            popup_06a8f76d15207de1b638b0f63e5732ba.setContent(html_064f912d251e5bc402782f6e77e13700);
+        
+
+        marker_ffabb1caf2b1e38a49cf23b932b60f66.bindPopup(popup_06a8f76d15207de1b638b0f63e5732ba)
+        ;
+
+        
+    
+    
+            var marker_a95b80d57d111b1c6e91000acbf0349a = L.marker(
+                [12.8838648, 77.5508339],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_c38bb2228a56ae2f89897455582c501c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a95b80d57d111b1c6e91000acbf0349a.setIcon(icon_c38bb2228a56ae2f89897455582c501c);
+        
+    
+        var popup_c6490ed499ca783d040cbc2931404c88 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d189b63d68d3cc1f4e1638dde6c768ea = $(`<div id="html_d189b63d68d3cc1f4e1638dde6c768ea" style="width: 100.0%; height: 100.0%;">Indian Oil Petrol Bunk-Sree Shakthi Filling Station</div>`)[0];
+            popup_c6490ed499ca783d040cbc2931404c88.setContent(html_d189b63d68d3cc1f4e1638dde6c768ea);
+        
+
+        marker_a95b80d57d111b1c6e91000acbf0349a.bindPopup(popup_c6490ed499ca783d040cbc2931404c88)
+        ;
+
+        
+    
+    
+            var marker_0e826317126100ce8f01fff10fb424c2 = L.marker(
+                [12.8579407, 77.5831473],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_e57017a429ee5f83f1a39659fc4c2559 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0e826317126100ce8f01fff10fb424c2.setIcon(icon_e57017a429ee5f83f1a39659fc4c2559);
+        
+    
+        var popup_e1fdae6c2ab2083651c9fc0b540ce1cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_504276fbf1f0f4b58e15245fa1f1934e = $(`<div id="html_504276fbf1f0f4b58e15245fa1f1934e" style="width: 100.0%; height: 100.0%;">Vinyas Regency Apartment</div>`)[0];
+            popup_e1fdae6c2ab2083651c9fc0b540ce1cc.setContent(html_504276fbf1f0f4b58e15245fa1f1934e);
+        
+
+        marker_0e826317126100ce8f01fff10fb424c2.bindPopup(popup_e1fdae6c2ab2083651c9fc0b540ce1cc)
+        ;
+
+        
+    
+    
+            var marker_55425bf28a30c6b706fb029f2320baff = L.marker(
+                [12.9324889, 77.5161326],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_f4f39d6a05f2a25929e2f228e10b8102 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_55425bf28a30c6b706fb029f2320baff.setIcon(icon_f4f39d6a05f2a25929e2f228e10b8102);
+        
+    
+        var popup_ede1d4d4335a22fd1ce4c49faf1be9d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_35e113cfdeddc626cd3068d5060f211a = $(`<div id="html_35e113cfdeddc626cd3068d5060f211a" style="width: 100.0%; height: 100.0%;">RR FUEL STATION</div>`)[0];
+            popup_ede1d4d4335a22fd1ce4c49faf1be9d0.setContent(html_35e113cfdeddc626cd3068d5060f211a);
+        
+
+        marker_55425bf28a30c6b706fb029f2320baff.bindPopup(popup_ede1d4d4335a22fd1ce4c49faf1be9d0)
+        ;
+
+        
+    
+    
+            var marker_e9c63cb203747b78bfac896f89684be3 = L.marker(
+                [12.9384348, 77.5216242],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_c494ee565fc389d30178fd233cf34b81 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e9c63cb203747b78bfac896f89684be3.setIcon(icon_c494ee565fc389d30178fd233cf34b81);
+        
+    
+        var popup_ff9900fff095faa72cd9a99f9e8ef52a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_569ca787f463b80ebbcc095e726a9aa6 = $(`<div id="html_569ca787f463b80ebbcc095e726a9aa6" style="width: 100.0%; height: 100.0%;">Latha Prasad Fuel Station</div>`)[0];
+            popup_ff9900fff095faa72cd9a99f9e8ef52a.setContent(html_569ca787f463b80ebbcc095e726a9aa6);
+        
+
+        marker_e9c63cb203747b78bfac896f89684be3.bindPopup(popup_ff9900fff095faa72cd9a99f9e8ef52a)
+        ;
+
+        
+    
+    
+            var marker_401e94b78309c127ec63a6ccee5d0741 = L.marker(
+                [12.9678953, 77.5790645],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_486a2ede8b6c82f98d193f07f955c8ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_401e94b78309c127ec63a6ccee5d0741.setIcon(icon_486a2ede8b6c82f98d193f07f955c8ad);
+        
+    
+        var popup_f7e353c4a84ac8da37c9cdd8476f5862 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9c85ff78c0b4ec8836199c76874acd6 = $(`<div id="html_a9c85ff78c0b4ec8836199c76874acd6" style="width: 100.0%; height: 100.0%;">Shree Bhuvaneshwari Parking / OTC ROAD - Park+</div>`)[0];
+            popup_f7e353c4a84ac8da37c9cdd8476f5862.setContent(html_a9c85ff78c0b4ec8836199c76874acd6);
+        
+
+        marker_401e94b78309c127ec63a6ccee5d0741.bindPopup(popup_f7e353c4a84ac8da37c9cdd8476f5862)
+        ;
+
+        
+    
+    
+            var marker_5e5f62722a1b7e72056d5fc3ebd21d01 = L.marker(
+                [12.964654, 77.586791],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_0c16bbe9700346761e472a16edf20c0d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5e5f62722a1b7e72056d5fc3ebd21d01.setIcon(icon_0c16bbe9700346761e472a16edf20c0d);
+        
+    
+        var popup_423290e63a7653cfc5638651f9060abd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07c5c303e27c140987659f7c342b1da0 = $(`<div id="html_07c5c303e27c140987659f7c342b1da0" style="width: 100.0%; height: 100.0%;">Unity Building Parking Lot</div>`)[0];
+            popup_423290e63a7653cfc5638651f9060abd.setContent(html_07c5c303e27c140987659f7c342b1da0);
+        
+
+        marker_5e5f62722a1b7e72056d5fc3ebd21d01.bindPopup(popup_423290e63a7653cfc5638651f9060abd)
+        ;
+
+        
+    
+    
+            var marker_1b97b3a7cb8a9406bfc9d88ae41ab957 = L.marker(
+                [12.9007332, 77.6502779],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_7bb6b3f555ad510f428829bacc9516cc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1b97b3a7cb8a9406bfc9d88ae41ab957.setIcon(icon_7bb6b3f555ad510f428829bacc9516cc);
+        
+    
+        var popup_99db43acab46741604cb15b80c3358f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c295738ed1ac19e567410af0731bc59 = $(`<div id="html_2c295738ed1ac19e567410af0731bc59" style="width: 100.0%; height: 100.0%;">BHive Car Parking</div>`)[0];
+            popup_99db43acab46741604cb15b80c3358f0.setContent(html_2c295738ed1ac19e567410af0731bc59);
+        
+
+        marker_1b97b3a7cb8a9406bfc9d88ae41ab957.bindPopup(popup_99db43acab46741604cb15b80c3358f0)
+        ;
+
+        
+    
+    
+            var marker_0194f1cf7b1e73d5ebbcdcb8d6642318 = L.marker(
+                [12.8712692, 77.6446456],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_62b7ccdae480cef981f94235c1c3416d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0194f1cf7b1e73d5ebbcdcb8d6642318.setIcon(icon_62b7ccdae480cef981f94235c1c3416d);
+        
+    
+        var popup_ecd99042b732b2c498c044c8b8bb2959 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cf70c3f801af5a04eeed0f7e6c46ae64 = $(`<div id="html_cf70c3f801af5a04eeed0f7e6c46ae64" style="width: 100.0%; height: 100.0%;">Pioneer Green Woods Apartment</div>`)[0];
+            popup_ecd99042b732b2c498c044c8b8bb2959.setContent(html_cf70c3f801af5a04eeed0f7e6c46ae64);
+        
+
+        marker_0194f1cf7b1e73d5ebbcdcb8d6642318.bindPopup(popup_ecd99042b732b2c498c044c8b8bb2959)
+        ;
+
+        
+    
+    
+            var marker_9e8cf4fd45a4ee5c325e2afb2bd913a5 = L.marker(
+                [12.8917417, 77.5774291],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_6163bdd10ff30b0b35535e6656a49891 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9e8cf4fd45a4ee5c325e2afb2bd913a5.setIcon(icon_6163bdd10ff30b0b35535e6656a49891);
+        
+    
+        var popup_bd87f8fa179cfbcccc17bc3aab08cbe7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bcc0a4c4901722a8bc586b6e8060604b = $(`<div id="html_bcc0a4c4901722a8bc586b6e8060604b" style="width: 100.0%; height: 100.0%;">Patel Fuel Station</div>`)[0];
+            popup_bd87f8fa179cfbcccc17bc3aab08cbe7.setContent(html_bcc0a4c4901722a8bc586b6e8060604b);
+        
+
+        marker_9e8cf4fd45a4ee5c325e2afb2bd913a5.bindPopup(popup_bd87f8fa179cfbcccc17bc3aab08cbe7)
+        ;
+
+        
+    
+    
+            var marker_aa3e7fb677b86a9e7827a2d668e88562 = L.marker(
+                [12.8838648, 77.5508339],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_20385a6d629097ba20ec02749fefd55d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_aa3e7fb677b86a9e7827a2d668e88562.setIcon(icon_20385a6d629097ba20ec02749fefd55d);
+        
+    
+        var popup_c8cba184c4633f516a22b8dd9bcfe5b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed412685fd27013d643774087702dc38 = $(`<div id="html_ed412685fd27013d643774087702dc38" style="width: 100.0%; height: 100.0%;">Indian Oil Petrol Bunk-Sree Shakthi Filling Station</div>`)[0];
+            popup_c8cba184c4633f516a22b8dd9bcfe5b2.setContent(html_ed412685fd27013d643774087702dc38);
+        
+
+        marker_aa3e7fb677b86a9e7827a2d668e88562.bindPopup(popup_c8cba184c4633f516a22b8dd9bcfe5b2)
+        ;
+
+        
+    
+    
+            var marker_8bd3e39c6672dec192cb08603974027d = L.marker(
+                [12.8893805, 77.6199973],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_d953340fe88ed28911e51d40c47a1024 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8bd3e39c6672dec192cb08603974027d.setIcon(icon_d953340fe88ed28911e51d40c47a1024);
+        
+    
+        var popup_c23e1607c938482167d43fc7b378f731 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5c838fcb76a2a9004d3db3261af3fb94 = $(`<div id="html_5c838fcb76a2a9004d3db3261af3fb94" style="width: 100.0%; height: 100.0%;">Goldenrays Apartment</div>`)[0];
+            popup_c23e1607c938482167d43fc7b378f731.setContent(html_5c838fcb76a2a9004d3db3261af3fb94);
+        
+
+        marker_8bd3e39c6672dec192cb08603974027d.bindPopup(popup_c23e1607c938482167d43fc7b378f731)
+        ;
+
+        
+    
+    
+            var marker_d7f1c4bc4d84badaf12846644aab8c14 = L.marker(
+                [12.8990473, 77.6584243],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_6da14bb87d0484003b9bc88c0356e4a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d7f1c4bc4d84badaf12846644aab8c14.setIcon(icon_6da14bb87d0484003b9bc88c0356e4a5);
+        
+    
+        var popup_dadffb422f3b544058d7f2795f760539 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd5afae24d3063e885108f368d0f360c = $(`<div id="html_bd5afae24d3063e885108f368d0f360c" style="width: 100.0%; height: 100.0%;">Indian Oil</div>`)[0];
+            popup_dadffb422f3b544058d7f2795f760539.setContent(html_bd5afae24d3063e885108f368d0f360c);
+        
+
+        marker_d7f1c4bc4d84badaf12846644aab8c14.bindPopup(popup_dadffb422f3b544058d7f2795f760539)
+        ;
+
+        
+    
+    
+            var marker_2e3bbc2048f5136b93fb9850d3b14d1c = L.marker(
+                [12.9410958, 77.6958901],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_21d49b067806726354db100db63727cc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2e3bbc2048f5136b93fb9850d3b14d1c.setIcon(icon_21d49b067806726354db100db63727cc);
+        
+    
+        var popup_ad7f34e4e25416e20fd98488510d2dc5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d985210847fd5e8c00f82567cb68264 = $(`<div id="html_7d985210847fd5e8c00f82567cb68264" style="width: 100.0%; height: 100.0%;">s.v.m fuel station , petrol bunk</div>`)[0];
+            popup_ad7f34e4e25416e20fd98488510d2dc5.setContent(html_7d985210847fd5e8c00f82567cb68264);
+        
+
+        marker_2e3bbc2048f5136b93fb9850d3b14d1c.bindPopup(popup_ad7f34e4e25416e20fd98488510d2dc5)
+        ;
+
+        
+    
+    
+            var marker_9a3a697fa5888b6c09a4dc560668fd24 = L.marker(
+                [12.8757979, 77.5960039],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_832f9b502d13355cfb919cf0e7299a36 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9a3a697fa5888b6c09a4dc560668fd24.setIcon(icon_832f9b502d13355cfb919cf0e7299a36);
+        
+    
+        var popup_cc52b8c0b8d9935d257d768b464e805b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ced85ee0379915512fd2ea61e711a49d = $(`<div id="html_ced85ee0379915512fd2ea61e711a49d" style="width: 100.0%; height: 100.0%;">Royal Meenakshi Mall</div>`)[0];
+            popup_cc52b8c0b8d9935d257d768b464e805b.setContent(html_ced85ee0379915512fd2ea61e711a49d);
+        
+
+        marker_9a3a697fa5888b6c09a4dc560668fd24.bindPopup(popup_cc52b8c0b8d9935d257d768b464e805b)
+        ;
+
+        
+    
+    
+            var marker_76cd2870164d3cd223824f3c9ebe6b98 = L.marker(
+                [12.9395961, 77.7271832],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_3734ead663bac3962c2ec985816662fe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_76cd2870164d3cd223824f3c9ebe6b98.setIcon(icon_3734ead663bac3962c2ec985816662fe);
+        
+    
+        var popup_6fda5bfd40c2b99f3dfd92fcdd600505 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07b9ddf26dc69fe31372853350bd170f = $(`<div id="html_07b9ddf26dc69fe31372853350bd170f" style="width: 100.0%; height: 100.0%;">Harikrishna Fuel Station (Bharat Petroleum)</div>`)[0];
+            popup_6fda5bfd40c2b99f3dfd92fcdd600505.setContent(html_07b9ddf26dc69fe31372853350bd170f);
+        
+
+        marker_76cd2870164d3cd223824f3c9ebe6b98.bindPopup(popup_6fda5bfd40c2b99f3dfd92fcdd600505)
+        ;
+
+        
+    
+    
+            var marker_aa606fe4d3476fb339035104b5301c2f = L.marker(
+                [12.8435696, 77.6628059],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_5d1621ce0a5addf6550060571f65a925 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_aa606fe4d3476fb339035104b5301c2f.setIcon(icon_5d1621ce0a5addf6550060571f65a925);
+        
+    
+        var popup_0be5cd8e6ba8608254a8717dae1cb249 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_62180433aad224c07e47acae4f27253b = $(`<div id="html_62180433aad224c07e47acae4f27253b" style="width: 100.0%; height: 100.0%;">IIITB Car Parking</div>`)[0];
+            popup_0be5cd8e6ba8608254a8717dae1cb249.setContent(html_62180433aad224c07e47acae4f27253b);
+        
+
+        marker_aa606fe4d3476fb339035104b5301c2f.bindPopup(popup_0be5cd8e6ba8608254a8717dae1cb249)
+        ;
+
+        
+    
+    
+            var marker_5af2e0b296fafbf65b3526165d0f712b = L.marker(
+                [12.9924896, 77.7126209],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_1f4461b9c7e59fa26b281252c91284a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5af2e0b296fafbf65b3526165d0f712b.setIcon(icon_1f4461b9c7e59fa26b281252c91284a9);
+        
+    
+        var popup_6ca3ec923dcd2a00ad14759f52333199 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7340234be919ba00c4204cea78e93c0b = $(`<div id="html_7340234be919ba00c4204cea78e93c0b" style="width: 100.0%; height: 100.0%;">Uddi gas pump</div>`)[0];
+            popup_6ca3ec923dcd2a00ad14759f52333199.setContent(html_7340234be919ba00c4204cea78e93c0b);
+        
+
+        marker_5af2e0b296fafbf65b3526165d0f712b.bindPopup(popup_6ca3ec923dcd2a00ad14759f52333199)
+        ;
+
+        
+    
+    
+            var marker_dd29464062d5074621137c88fa8e1eb4 = L.marker(
+                [12.934224, 77.7021609],
+                {}
+            ).addTo(map_37d9628d2db96464ffe0e3812d97261a);
+        
+    
+            var icon_5b3a6136dcb1b91c233510a00d2c3cf4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_dd29464062d5074621137c88fa8e1eb4.setIcon(icon_5b3a6136dcb1b91c233510a00d2c3cf4);
+        
+    
+        var popup_f48fa91e2c9b38182405c326959fbf91 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f7e0ac9bc5d64812777dc5149dd5d476 = $(`<div id="html_f7e0ac9bc5d64812777dc5149dd5d476" style="width: 100.0%; height: 100.0%;">Indraprastha Apartment</div>`)[0];
+            popup_f48fa91e2c9b38182405c326959fbf91.setContent(html_f7e0ac9bc5d64812777dc5149dd5d476);
+        
+
+        marker_dd29464062d5074621137c88fa8e1eb4.bindPopup(popup_f48fa91e2c9b38182405c326959fbf91)
+        ;
+
+        
+    
+    
+            map_37d9628d2db96464ffe0e3812d97261a.fitBounds(
+                [[12.8435696, 77.4830283], [13.0613184, 77.7824534]],
+                {}
+            );
+        
+</script>
