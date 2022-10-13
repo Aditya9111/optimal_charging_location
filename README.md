@@ -26,13 +26,14 @@ Please run `pip install -r requirements.txt` on your virtual environment to inst
 ## The Web App
 This section briefly explains the [web app](http://optimus.herokuapp.com/). On the home page, the user will be prompted to enter one parameters: Electric Vehicle Penetration Ratio ( what percentage of vehicle you want to convert to electric) . 
 #### Landing Page and User Input
+![Landing Page](https://raw.githubusercontent.com/Aditya9111/optimal_charging_location/main/pics/1.png)
 ![user-input](https://raw.githubusercontent.com/Aditya9111/optimal_charging_location/main/pics/5.png)
 The online app will display a table of parking lots that are ideal sites to install chargers after the user hits the "Find Optimal Locations" button.
+
+#### Explore results on a map
 #### Final Result Heatmap with Markers
 ![Heat Map](https://raw.githubusercontent.com/Aditya9111/optimal_charging_location/main/pics/4.png)
 The user had the option of viewing the outcomes on a map.
-#### Explore results on a map
-![Landing Page](https://raw.githubusercontent.com/Aditya9111/optimal_charging_location/main/pics/1.png)
 ![existing charging section](https://raw.githubusercontent.com/Aditya9111/optimal_charging_location/main/pics/2.png)
 
 ## Quickstart to run this application
