@@ -21,7 +21,7 @@ Please run `pip install -r requirements.txt` on your virtual environment to inst
 (2) Charging capacity does not exceed each station's limit.
 
 ### Model Formulation
-![formulation](https://raw.githubusercontent.com/Aditya9111/optimal_charging_location/main/pics/8.png)
+![formulation](https://raw.githubusercontent.com/Aditya9111/optimal_charging_location/main/pics/9.png)
 
 ## The Web App
 This section briefly explains the [web app](http://optimus.herokuapp.com/). On the home page, the user will be prompted to enter one parameters: Electric Vehicle Penetration Ratio ( what percentage of vehicle you want to convert to electric) . 
