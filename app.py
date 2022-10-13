@@ -190,7 +190,7 @@ def output():
         EVPR = float(request.form['slider1'])
         final_df = pd.read_csv('csv/final.csv')
 
-        final_df = final_df.loc[final_df['Grade'] < int(EVPR)]
+        final_df = final_df.loc[final_df['grade'] < int(EVPR)]
 
         for indice, row in final_df.iterrows():
 
