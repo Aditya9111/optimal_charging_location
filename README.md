@@ -20,7 +20,7 @@ Please run `pip install -r requirements.txt` on your virtual environment to inst
 (1) Each destination should have enough charging stations.<br>
 (2) Charging capacity does not exceed each station's limit.
 
-### to find distance between two points
+### To find distance between two points
 
 ![haversine](https://raw.githubusercontent.com/Aditya9111/optimal_charging_location/main/pics/haversine.png)
 
