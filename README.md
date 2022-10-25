@@ -6,6 +6,7 @@ The fact that the current network of charging stations is still in its infancy i
 
 For municipal planners to select the best placement for future electric vehicle (EV) charging stations in the City of Bangalore, **Optimus** is an optimization and visualisation tool. It enables the user to investigate the best placement of charging stations in various EV charging demand scenarios. The product is deployed as a [Web app](http://optimus.herokuapp.com/). 
 
+[Repo Link](https://github.com/Aditya9111/optimal_charging_location). 
 ## Packages
 Please run `pip install -r requirements.txt` on your virtual environment to install the required python packages to run. This project solves the **optimization** problem using algorithm shown below, **visualizes** the final result using Folium, and deploys the **web app** using Flask. 
 
